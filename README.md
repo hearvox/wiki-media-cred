@@ -9,8 +9,6 @@ Resources and data diary for the <a href="https://misinfocon.com/turning-wikimed
 * Add MBFC ratings (credibility, factual-reporting, maybe bias) to entities (2K) with MBFC Identifier IDs.
 * Create entities for USA state press association, e.g, [Colorado Press Association](https://www.wikidata.org/wiki/Q5148862) (instance of: `correspondents' association` (<a href="https://www.wikidata.org/wiki/Q22679796">Q22679796</a>).
 * Relate publication to their state (and national) press association to which they belong as instance of: `member` ([P463](https://www.wikidata.org/wiki/Property:P463)).
-* Property: https://www.wikidata.org/wiki/Wikidata:Property_proposal/assessed_source_reliability
-* Schema: https://www.wikidata.org/wiki/Wikidata:WikiProject_Source_Reliability#Data_model
 
 ### Done
 * Relate classes describing news-outlets to [`news media`](https://www.wikidata.org/wiki/Q1193236) (as subclass: [`news program`](https://www.wikidata.org/wiki/Q1358344), [`news program`](https://www.wikidata.org/wiki/Q1358344),  [`news magazine`](https://www.wikidata.org/wiki/Q1684600)).
@@ -25,11 +23,28 @@ Resources and data diary for the <a href="https://misinfocon.com/turning-wikimed
 
 ### Quick Statements
 * Use [“Run in Background”](https://www.wikidata.org/wiki/Help:QuickStatements#Using_QuickStatements_version_2_in_batch_mode) mode (for most batches).
-* Tool **cannot** add rank.
+* Tool **cannot** add rank, try [wikibase-cli](https://github.com/maxlath/wikibase-cli) for `official website` URL.
 
 ## Wikidata:WikiProject Source Reliability
 * Add Iffy Index of Unreliable Sources (JSON) to [WD:CRAP](https://www.wikidata.org/wiki/Wikidata:WikiProject_Source_Reliability) GitHub [source-reliability](https://github.com/the-interlace/source-reliability).
 * Add Pink Slime (JSON) to WD:CRAP GitHub source-reliability.
+* Property proposal: https://www.wikidata.org/wiki/Wikidata:Property_proposal/assessed_source_reliability 
+* Schema: https://www.wikidata.org/wiki/Wikidata:WikiProject_Source_Reliability#Data_model
+
+## API
+* wikibase-cli: https://github.com/maxlath/wikibase-cli
+* Wikidata Query Service: https://query.wikidata.org/
+* Mix'n'Match (match datasets to Wikidata): https://mix-n-match.toolforge.org/#/import/
+
+## DataViz
+Using `news media` ([Q1193236](https://www.wikidata.org/wiki/Q1193236)) as seed:
+* Wikidata Graph Builder: https://angryloki.github.io/wikidata-graph-builder/?item=Q1193236&property=P279&mode=reverse&sc_color=%231c5ec3c4&sc_width=5
+* Wikidata generic tree: https://wikidata-todo.toolforge.org/tree.html?q=1193236&rp=279
+* Reasonator ("Wikidata entries in a item-type-optimized fashion, and… related, significant data): https://reasonator.toolforge.org/?q=Q1193236
+* SQID ("information about Wikidata classes and properties…  inspired by Magnus Manske's Reasonator): https://sqid.toolforge.org/#/view?id=Q1193236
+* mataphacts ("demo system based on the open Wikidata knowledge graph"): https://wikidata.metaphacts.com/resource/wd:Q1193236
+* WD News Media, sheet with `news media` subclass hierarchy: https://docs.google.com/spreadsheets/d/1oX4IYKHEsaCdkpv07ftcfYtKAtG6mRm5eYA5P-GIEMI/edit#gid=0)
+* Template:Subclass list (with link to building query): https://m.wikidata.org/wiki/Template:Subclass_list
 
 ## Wikipedia articles
 ### Todo
