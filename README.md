@@ -3,6 +3,16 @@ Turning Wikimedia into a news-site credibility tool.
 
 Resources and data diary for the <a href="https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec">Wikicred/Iffy.news project</a> adding news-site credibility indicators to Wikidata/Wikipedia.
 
+## Data decisions
+The goal is to add data to news outlets in Wikdata (WD) which could help distinguish fact-based from fake news. That data comes from external databases. I;m using domain names to relate the data with the WD items. Tasks to do that are:
+1. List news-outlet WD QIDs and labels.
+1. Match news-outlet domain names with their QIDs.
+
+### 1. News-outlets in WD
+Using the Wikidata Query Service…
+
+### 2. Domain-name matches
+
 ## Wikidata entities
 
 ### Todo
