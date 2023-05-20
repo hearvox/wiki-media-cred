@@ -1,0 +1,28 @@
+CREATE
+LAST	Len	"Alabama Press Association"
+LAST	Den	"Organization of newspapers in the U.S. state of Alabama"
+LAST	Aen	"alabamapress.org"
+LAST	P31	Q22679796
+LAST	P31	Q2178147
+LAST	P452	Q11030
+LAST	P17	Q30
+LAST	P131	Q173
+LAST	P159	Q79867
+LAST	P856	"https://www.alabamapress.org/"	P407	Q1860
+LAST	P213	"0000 0000 9881 8572"
+LAST	P244	"n80139199"
+LAST	P214	"146583284"
+CREATE
+LAST	Len	"Arizona Newspaper Association"
+LAST	Den	"Organization of newspapers in the U.S. state of Arizona"
+LAST	Aen	"ananews.com"
+LAST	P31	Q22679796
+LAST	P31	Q2178147
+LAST	P452	Q11030
+LAST	P17	Q30
+LAST	P131	Q816
+LAST	P159	Q16556
+LAST	P856	"https://ananews.com/"	P407	Q1860
+LAST	P213	"0000 0001 0489 6658"
+LAST	P244	"n77014568"
+LAST	P214	"157082104"
