@@ -8,9 +8,7 @@
  * Parse webage using Simple HTML DOM library
  * @see https://simplehtmldom.sourceforge.io/docs/1.9/manual/finding-html-elements/
  *
- */
-
-/* IMPORTANT:
+ * IMPORTANT:
  * 1. Enter path to your file this script writes data to.
  * 2. Enter path your location for the Simple HTML DOM library.
  */
