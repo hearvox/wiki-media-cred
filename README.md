@@ -1,4 +1,4 @@
-# wiki-media-cred
+# Wiki Media Cred
 Turning Wikimedia into a news-site credibility tool.
 
 Resources and data diary for the <a href="https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec">Wikicred/Iffy.news project</a> adding news-site credibility indicators to Wikidata/Wikipedia.
