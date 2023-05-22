@@ -4,63 +4,46 @@ Info on code files
 ```mermaid
 mindmap
 	root((news media))
-		news agency
-			newswire
-			Q16629514
-			Q16708966
+		news agency	
 			news photo agency
-		newsletter
-			stock exchange newsletter
-			night letter +1
-			Newsletter Wikimedia Nederland
-			Newsletter Wikimedia Belgium
-			Wikimedia newsletter +1
-			school newsletter
+			newswire
+		newsletter	
 			municipal newsletter
-			Q108195060
-		talk radio
-			conservative talk radio
-			Progressive talk radio
-			Internet talk radio
-		investigative journalism
-		news program
-			United States cable news
-			television news magazine
-			flagship newscast
+			night letter +1
+			school newsletter
+			stock exchange newsletter
+			Wikimedia newsletter
+		investigative journalism	
+		medical press	
+		news program	
 			current affairs shows
-		news magazine
-		news broadcasting
+			flagship newscast
+			television news magazine
+			United States cable news
+		news broadcasting	
 			children's broadcasted news
 			current affairs
 			election broadcast
 			reporting television program
-		press center
-		medical press
-		news media in the United States
-		written news media
-			Q16487172
-			Q66849906
-			newspaper +224
-		news website
-			TIMES OF UP
-			sports news website
-			online newspaper
+		news magazine	
+		news media in the United States	
+		news website	
 			fake news website
 			news aggregation website +2
-			video game news website +1
+			online newspaper
+			sports news website
 			television news website
-		Chareidi News hotlines
-		Cooperative press
+			video game news website +1
+		talk radio	
+			conservative talk radio
+			Internet talk radio
+			Progressive talk radio
+		press center	
+		written news media	
+			Cooperative press
+			Famille de presse
+			newspaper +202
 		women's press
-		Utro Fevralya
  ```
- 
- ## Mermaid: flowchart
-```mermaid
-flowchart TD
-    A[Christmas] -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[Laptop]
-    C -->|Two| E[iPhone]
-    C -->|Three| F[fa:fa-car Car]
-```
+##References 
+GitHub: [Creating Diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams) (see [Mermaid documentation](https://mermaid-js.github.io/mermaid/#/))
