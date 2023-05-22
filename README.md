@@ -3,6 +3,18 @@ Turning Wikimedia into a news-site credibility tool.
 
 Resources and data diary for the <a href="https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec">Wikicred/Iffy.news project</a> adding news-site credibility indicators to Wikidata/Wikipedia.
 
+## Data ducks in row
+1. Get all news outlets under one general category: `news media`
+2. Get subclasses into logical categories (one or two levels down).
+3. Chnage specific new-outlets improperly `labeled sublclass` to 'instance of`.
+4. Names for unlabled subclasses (one or two levels down), consulting the item's Wikipedia article or `official webste`
+
+Example: https://www.wikidata.org/wiki/Q16708966 `subclass of` `news agency`
+
+This Month in GLAM (Q15868218) Wikimedia newsletter
+
+`newspaper` `daily newspaper`
+
 ## Data decisions
 The goal is to add data to news outlets in Wikdata (WD) which could help distinguish fact-based from fake news. That data comes from external databases. I;m using domain names to relate the data with the WD items. Tasks to do that are:
 1. List news-outlet WD QIDs and labels.
