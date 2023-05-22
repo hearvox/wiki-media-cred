@@ -15,6 +15,11 @@ This Month in GLAM (Q15868218) Wikimedia newsletter
 
 `newspaper` `daily newspaper`
 
+Soe are unsolvable: https://www.wikidata.org/wiki/Q87527714
+https://www.wikidata.org/wiki/Q31075044
+
+UNlableed and miscat ofte the same.
+
 ## Data decisions
 The goal is to add data to news outlets in Wikdata (WD) which could help distinguish fact-based from fake news. That data comes from external databases. I;m using domain names to relate the data with the WD items. Tasks to do that are:
 1. List news-outlet WD QIDs and labels.
