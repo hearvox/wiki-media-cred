@@ -1,21 +1,29 @@
 # Wiki Media Cred
-Turning Wikimedia into a news-site credibility tool.
+Goal: Turn Wikimedia into a news-site credibility tool.
 
-Resources and data diary for the <a href="https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec">Wikicred/Iffy.news project</a> adding news-site credibility indicators to Wikidata/Wikipedia.
+These are the resources and data diary for the <a href="https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec">Wikicred/Iffy.news project</a>, adding news-site credibility indicators into Wikidata/Wikipedia (from external datasets).
 
-## Data ducks in row
+The following workflow comes from trial and many errors in my attempts to:
+* Locate news-media items in Wikidata (working with U.S. only).
+* Add items for news media not in Wikidata (found in external datasets).
+* Add and standardize Wikidata statements for news-media domain names (used to match Wikidata items with entries in other media databases).
+* Add external-dataset info into Wikidata for news-media items, especally crediility indicaters like press-association membership and street address.
+
+I gathered Wikidata items with the [Wikidata Query Service](https://query.wikidata.org/) ([example search: `news media` in the `Unisted States`](https://w.wiki/6k32)), added data using [Quick Statements](https://quickstatements.toolforge.org/#/) ([example update: add `place of publication`](https://quickstatements.toolforge.org/#/batch/128928)) and [wikibase-cli](https://github.com/maxlath/wikibase-cli), and merged Wikidata with external datasets mostly in [Google Sheets](https://docs.google.com/spreadsheets/d/1iriRBIkiE2dyhoT1ZWCVGcHhAWvdXZTA_1hBIF-_B5A/edit#gid=266534370).
+
+## Coordinating categories
+After starting over several times, I remebered it's best to make each step replicable and reversable, so I could back out of any mess I made, then start fresh. This usualy meant adding another column with some sortable flag indicating with new data came from.
+
 1. Get all news outlets under one general category: `news media`
 2. Get subclasses into logical categories (one or two levels down).
-3. Chnage specific new-outlets improperly `labeled sublclass` to 'instance of`.
+3. Change specific new-outlets improperly `labeled sublclass` to 'instance of`.
 4. Names for unlabled subclasses (one or two levels down), consulting the item's Wikipedia article or `official webste`
 
 Example: https://www.wikidata.org/wiki/Q16708966 `subclass of` `news agency`
 
-This Month in GLAM (Q15868218) Wikimedia newsletter
-
 `newspaper` `daily newspaper`
 
-Soe are unsolvable: https://www.wikidata.org/wiki/Q87527714
+A few are unsolvable: https://www.wikidata.org/wiki/Q87527714
 https://www.wikidata.org/wiki/Q31075044
 
 UNlableed and miscat ofte the same.
