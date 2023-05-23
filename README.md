@@ -1,4 +1,5 @@
 # Wiki Media Cred
+*[draft in progress]*
 Goal: Turn Wikimedia into a news-site credibility tool.
 
 These are the resources and data diary for the <a href="https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec">Wikicred/Iffy.news project</a>, adding news-site credibility indicators into Wikidata/Wikipedia (from external datasets).
@@ -9,16 +10,22 @@ The following workflow comes from trial and many errors in my attempts to:
 * Add and standardize Wikidata statements for news-media domain names (used to match Wikidata items with entries in other media databases).
 * Add external-dataset info into Wikidata for news-media items, especally crediility indicaters like press-association membership and street address.
 
-I gathered Wikidata items with the [Wikidata Query Service](https://query.wikidata.org/) ([example search: `news media` in the `Unisted States`](https://w.wiki/6k32)), added data using [Quick Statements](https://quickstatements.toolforge.org/#/) ([example update: add `place of publication`](https://quickstatements.toolforge.org/#/batch/128928)) and [wikibase-cli](https://github.com/maxlath/wikibase-cli), and merged Wikidata with external datasets mostly in [Google Sheets](https://docs.google.com/spreadsheets/d/1iriRBIkiE2dyhoT1ZWCVGcHhAWvdXZTA_1hBIF-_B5A/edit#gid=266534370).
+I gathered Wikidata items with the [Wikidata Query Service](https://query.wikidata.org/) (example search: [`United States` `news media`](https://w.wiki/6k32)), added data using [Quick Statements](https://quickstatements.toolforge.org/#/) (example update: [`place of publication`](https://quickstatements.toolforge.org/#/batch/128928)) and [wikibase-cli](https://github.com/maxlath/wikibase-cli), and merged Wikidata with external datasets mostly in [Google Sheets](https://docs.google.com/spreadsheets/d/1iriRBIkiE2dyhoT1ZWCVGcHhAWvdXZTA_1hBIF-_B5A/edit#gid=266534370).
 
-## Coordinating categories
-After starting over several times, I remebered it's best to make each step replicable and reversable, so I could back out of any mess I made, then start fresh. This usualy meant adding another column with some sortable flag indicating with new data came from.
+After starting over several times, I remembered it's best to make each step replicable and reversable, to easily back out of any mess I made. This usually meant adding a column in a sheet with a sortable flag, indicating the source of newly added data.
 
-1. Get all news outlets under one general category: `news media`
+## Coordinate categories
+It was helpful to have all news media in Wikidata be discoverable under one category. Most were already an instance of either `news media` or one of its subclasses. I, so I brought the few outliers into the fold (i.e., made them part of the class heirarchy).
+
+
+1. Get all news outlets under one general category: `news media`.
 2. Get subclasses into logical categories (one or two levels down).
 3. Change specific new-outlets improperly `labeled sublclass` to 'instance of`.
-4. Names for unlabled subclasses (one or two levels down), consulting the item's Wikipedia article or `official webste`
+4. Names for unlabled subclasses (one or two levels down), consulting the item's Wikipedia article or `official website`.
 
+## Put publications in their place
+
+-----
 Example: https://www.wikidata.org/wiki/Q16708966 `subclass of` `news agency`
 
 `newspaper` `daily newspaper`
@@ -33,8 +40,7 @@ The goal is to add data to news outlets in Wikdata (WD) which could help disting
 1. List news-outlet WD QIDs and labels.
 1. Match news-outlet domain names with their QIDs.
 
-### 1. News-outlets in WD
-Using the Wikidata Query Service…
+
 
 ### 2. Domain-name matches
 
