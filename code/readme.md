@@ -4,46 +4,46 @@ Info on code files
 ```mermaid
 mindmap
 	root((news media))
-		news agency	
+		id(news agency)
 			news photo agency
 			newswire
-		newsletter	
+		id(newsletter)
 			municipal newsletter
 			night letter +1
 			school newsletter
 			stock exchange newsletter
 			Wikimedia newsletter
-		investigative journalism	
-		medical press	
-		news program	
+		id(investigative journalism)	
+		id(medical press)	
+		id(news program)	
 			current affairs shows
 			flagship newscast
 			television news magazine
 			United States cable news
-		news broadcasting	
+		id(news broadcasting)	
 			children's broadcasted news
 			current affairs
 			election broadcast
 			reporting television program
-		news magazine	
-		news media in the United States	
-		news website	
+		id(news magazine)
+		id(news media in the United States)
+		id(news website)
 			fake news website
 			news aggregation website +2
 			online newspaper
 			sports news website
 			television news website
 			video game news website +1
-		talk radio	
+		id(talk radio)
 			conservative talk radio
 			Internet talk radio
 			Progressive talk radio
-		press center	
-		written news media	
+		id(press center)	
+		id(written news media)
 			Cooperative press
 			Famille de presse
 			newspaper +202
-		women's press
+		id(women's press)
  ```
 ## Dataset
 ```SPARQL
