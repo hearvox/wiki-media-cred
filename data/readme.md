@@ -18,9 +18,7 @@ LAST	P131	Q173
 LAST	P159	Q79867
 LAST	P856	"https://www.alabamapress.org/"	P407	Q1860
 LAST	P213	"0000 0000 9881 8572"
-LAST	
-12.  Library of Congress authority ID (P244)
-13.  VIAF ID (P214)"n80139199"
+LAST	P244	"n80139199"
 LAST	P214	"146583284"
 ```
 ### Statements
@@ -31,11 +29,9 @@ LAST	P214	"146583284"
 5. Add `instance of`: `trade association` (Q2178147).
 6. Add 'industry' (P452): `journalism` (Q11030).
 7. Add `country` (P17): `United States of America` (Q30).
-8. Add `located in the administrative territorial entity` (P131): .
-9. Add `headquarters location` (P159):
+8. Add `located in the administrative territorial entity` (P131): state.
+9. Add `headquarters location` (P159): city.
 10. Add official website (P856), with `language of work or name` (P407): English (Q1860).
-11.  ISNI (P213)
-12.  Library of Congress authority ID (P244)
-13.  VIAF ID (P214)
-
-`instance of`
+11. Add. ISNI (P213) number.
+12. Add Library of Congress authority ID (P244).
+13. Add VIAF ID (P214).
