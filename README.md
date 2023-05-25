@@ -16,8 +16,6 @@ After starting over several times, I remembered it's best to make each step repl
 
 ## Coordinate categories
 It was helpful to have all news media in Wikidata be discoverable under one category. Most were already labeled that: In Wiki-speak, the news-outlet had the property [`instance of`](https://www.wikidata.org/wiki/Property:P31), or a [`subclass of`](https://www.wikidata.org/wiki/Property:P279), the item [`news media`](https://www.wikidata.org/wiki/Q1193236)).
-
-## Mermaid: mindmap
 ```mermaid
 mindmap
 	root((news media))
