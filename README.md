@@ -61,6 +61,9 @@ mindmap
 		id(women's press)
  ```
 
+*(See network view in [Wikidata Graph Builder]([url](https://angryloki.github.io/wikidata-graph-builder/?item=Q1193236&property=P279&mode=reverse&sc_color=%231c5ec3c4&sc_width=5).)*
+
+
 *[Brief diff btwn property and item, instance and subclass]* A few news-outlets were instance of items that should new-media subclasses but weren't (e.g., [`news program`](https://www.wikidata.org/wiki/Q1358344) and  [`news magazine`](https://www.wikidata.org/wiki/Q1684600). I brought them into the fold (i.e., made them a `news media` subclass, or subclass of a `news media` subclass.)
 
 THe classification wrangling werem't something like this:
