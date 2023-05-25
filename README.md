@@ -1,5 +1,5 @@
 # Wiki Media Cred
-*[draft in progress]*
+*[draft in progress]*  
 Goal: Turn Wikimedia into a news-site credibility tool.
 
 These are the resources and data diary for the <a href="https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec">Wikicred/Iffy.news project</a>, adding news-site credibility indicators into Wikidata/Wikipedia (from external datasets).
@@ -7,12 +7,12 @@ These are the resources and data diary for the <a href="https://misinfocon.com/t
 The following workflow comes from trial and many errors in my attempts to:
 * Locate news-media items in Wikidata (working with U.S. only).
 * Add items for news media not in Wikidata (found in external datasets).
-* Add and standardize Wikidata statements for news-media domain names (used to match Wikidata items with entries in other media databases).
-* Add external-dataset info into Wikidata for news-media items, especally crediility indicaters like press-association membership and street address.
+* Add and standardize Wikidata statements for news-media domain names (used to match Wikidata items with entries in external media databases).
+* Add external-dataset info into Wikidata for news-media items, especally crediility indicaters (e.g., press-association membership, street address).
 
 I gathered Wikidata items with the [Wikidata Query Service](https://query.wikidata.org/) (example search: [`United States` `news media`](https://w.wiki/6k32)), added data using [Quick Statements](https://quickstatements.toolforge.org/#/) (example update: [`place of publication`](https://quickstatements.toolforge.org/#/batch/128928)) and [wikibase-cli](https://github.com/maxlath/wikibase-cli), and merged Wikidata with external datasets mostly in [Google Sheets](https://docs.google.com/spreadsheets/d/1iriRBIkiE2dyhoT1ZWCVGcHhAWvdXZTA_1hBIF-_B5A/edit#gid=266534370), helped by the [Wikipedia and Wikidata Tools](https://workspace.google.com/marketplace/app/wikipedia_and_wikidata_tools/595109124715) sheets add-on.
 
-After starting over several times, I remembered it's best to make each step replicable and reversable, to easily back out of any mess I made. This usually meant adding a column in a sheet with a sortable flag, indicating the source of newly added data.
+After starting over several times, I remembered it's best to make each step replicable and reversable, so I can back out of any import mess I made. This usually meant adding a column with a sortable flag, indicating the source of imported data — e.g., helpful for tracking where I found a circulation estimate or domain name.
 
 ## Coordinate categories
 It was helpful to have all news media in Wikidata be discoverable under one category. Most were already an instance of either `news media` or one of its subclasses. I, so I brought the few outliers into the fold (i.e., made them part of the class heirarchy).
