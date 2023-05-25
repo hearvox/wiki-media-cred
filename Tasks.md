@@ -7,6 +7,7 @@ Work on news-media items in Wikidata.
 * Create entities for USA state press association, e.g, [Colorado Press Association](https://www.wikidata.org/wiki/Q5148862) (instance of: `correspondents' association` (<a href="https://www.wikidata.org/wiki/Q22679796">Q22679796</a>).
 * Relate publication to their state (and national) press association to which they belong as instance of: `member` ([P463](https://www.wikidata.org/wiki/Property:P463)).
 
+
 ### Done
 * Relate classes describing news-outlets to [`news media`](https://www.wikidata.org/wiki/Q1193236) (as subclass: [`news program`](https://www.wikidata.org/wiki/Q1358344),  [`news magazine`](https://www.wikidata.org/wiki/Q1684600)).
 * Add [`place of publication`](https://www.wikidata.org/wiki/Property:P291) city to 300 news-outlets.
@@ -22,8 +23,26 @@ Work on news-media items in Wikidata.
 * Use [“Run in Background”](https://www.wikidata.org/wiki/Help:QuickStatements#Using_QuickStatements_version_2_in_batch_mode) mode (for most batches).
 * Tool **cannot** add rank, try [wikibase-cli](https://github.com/maxlath/wikibase-cli) for `official website` URL.
 
+## Wikipedia articles
+### Todo
+*Coming*
+
+### Done
+*Nada*
+
 ## Wikidata:WikiProject Source Reliability
+### Done
 * Add Iffy Index of Unreliable Sources (JSON) to [WD:CRAP](https://www.wikidata.org/wiki/Wikidata:WikiProject_Source_Reliability) GitHub [source-reliability](https://github.com/the-interlace/source-reliability).
 * Add Pink Slime (JSON) to WD:CRAP GitHub source-reliability.
+
+### Ref
 * Property proposal: https://www.wikidata.org/wiki/Wikidata:Property_proposal/assessed_source_reliability 
 * Schema: https://www.wikidata.org/wiki/Wikidata:WikiProject_Source_Reliability#Data_model
+* VSAFE (example: [source assessement](https://www.wikidata.org/wiki/Q1542536#P1343))
+
+## Internet Domains Wikibase
+### Ref
+* Examples https://domains.wikibase.cloud/wiki/Item:Q137 | https://domains.wikibase.cloud/wiki/Item:Q23
+* Domains: [Quick Statements](https://domains.wikibase.cloud/tools/quickstatements/#/batch)
+
+*Wikimedia User: <a href="https://www.wikidata.org/wiki/Special:Contributions/Hearvox">Hearvox contributions</a>*
