@@ -23,6 +23,8 @@ Work on news-media items in Wikidata.
 * Use [“Run in Background”](https://www.wikidata.org/wiki/Help:QuickStatements#Using_QuickStatements_version_2_in_batch_mode) mode (for most batches).
 * Tool **cannot** add rank, try [wikibase-cli](https://github.com/maxlath/wikibase-cli) for `official website` URL.
 
+*Wikimedia User: <a href="https://www.wikidata.org/wiki/Special:Contributions/Hearvox">Hearvox contributions</a>*
+
 ## Wikipedia articles
 ### Todo
 *Coming*
@@ -44,5 +46,3 @@ Work on news-media items in Wikidata.
 ### Ref
 * Examples https://domains.wikibase.cloud/wiki/Item:Q137 | https://domains.wikibase.cloud/wiki/Item:Q23
 * Domains: [Quick Statements](https://domains.wikibase.cloud/tools/quickstatements/#/batch)
-
-*Wikimedia User: <a href="https://www.wikidata.org/wiki/Special:Contributions/Hearvox">Hearvox contributions</a>*
