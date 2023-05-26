@@ -1,3 +1,7 @@
+# Wiki Media Cred: Data
+*[Future home notes for Wiki Media Cred data]*
+
+## Geo
 Wikidata SPARQL query for US Cities: https://w.wiki/6fkS
 
 WD US cities sheet: https://docs.google.com/spreadsheets/d/1gxJfhn1T0iI7wmVKnLx9r25a6p0axVFxZWYkR_qcIQg/edit#gid=163502263
@@ -5,6 +9,7 @@ WD US cities sheet: https://docs.google.com/spreadsheets/d/1gxJfhn1T0iI7wmVKnLx9
 Tables of US newspapers lists in Wikipedia by state: https://en.wikipedia.org/wiki/Category:Lists_of_newspapers_published_in_the_United_States_by_state
 
 ## Quick Statements
+Example at add item for a state press assocation:
 ```SQL
 CREATE
 LAST	Len	"Alabama Press Association"
@@ -21,8 +26,8 @@ LAST	P213	"0000 0000 9881 8572"
 LAST	P244	"n80139199"
 LAST	P214	"146583284"
 ```
-### Statements
-1. Create a new item (in statements following, `LAST` holds the new item's QID). 
+Explation of above quick statement batch:
+1. Create a new item (in statements below, `LAST` holds the new item's QID). 
 2. Add description (`Den`).
 3. Add alias (`Aen`): domain name.
 4. Add `instance of` (P31): `correspondents' association` (Q22679796).
