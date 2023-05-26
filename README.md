@@ -63,7 +63,6 @@ mindmap
 
 *(See network view in [Wikidata Graph Builder]([url](https://angryloki.github.io/wikidata-graph-builder/?item=Q1193236&property=P279&mode=reverse&sc_color=%231c5ec3c4&sc_width=5).)*
 
-
 *[Brief diff btwn property and item, instance and subclass]* A few news-outlets were instance of items that should new-media subclasses but weren't (e.g., [`news program`](https://www.wikidata.org/wiki/Q1358344) and  [`news magazine`](https://www.wikidata.org/wiki/Q1684600). I brought them into the fold (i.e., made them a `news media` subclass, or subclass of a `news media` subclass.)
 
 THe classification wrangling werem't something like this:
@@ -72,32 +71,9 @@ THe classification wrangling werem't something like this:
 3. Change specific new-outlets improperly assigned `subclass` to 'instance of`.
 4. Names for unlabled subclasses (one or two levels down), consulting the item's Wikipedia article or `official website`.
 
+## Classy crowd-wisdom
+*[Graf on using existing WD-user choices to decide on which classes to add values to.]*
+
+
 ## Put publications in their place
-
------
-Example: https://www.wikidata.org/wiki/Q16708966 `subclass of` `news agency`
-
-`newspaper` `daily newspaper`
-
-A few are unsolvable: https://www.wikidata.org/wiki/Q87527714
-https://www.wikidata.org/wiki/Q31075044
-
-Unlableed and misclassified often the same.
-
-### Identfiers
-*[Brief diff item and related property identifier.]*
-Item: Media Bias/Fact Check ([`Q60741379`](https://www.wikidata.org/wiki/Q60741379))
-[`Wikidata property`](https://www.wikidata.org/wiki/Property:P1687) (Data type: Item):
-Media Bias/Fact Check ID ([`P9852`](https://www.wikidata.org/wiki/Property:P9852)), (Data type: External identifier)
-
-[Help: Data type](https://www.wikidata.org/wiki/Help:Data_type)
-
-
-## Data decisions
-The goal is to add data to news outlets in Wikdata (WD) which could help distinguish fact-based from fake news. That data comes from external databases. I;m using domain names to relate the data with the WD items. Tasks to do that are:
-1. List news-outlet WD QIDs and labels.
-1. Match news-outlet domain names with their QIDs.
-
-
-
-### Domain-name matches
+*[Graf on decision to use `place of publication` and `street address`, also `member of` and `dissolved`.]*
