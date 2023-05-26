@@ -1,5 +1,5 @@
 # Wiki Media Cred: Code
-*[Future home notes for Wiki Media Cred code]*
+*[Future home of notes for Wiki Media Cred code]*
 
 ## Dataset
 SPARQL query for the dataset used in Wiki Media Cred project:
