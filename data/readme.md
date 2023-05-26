@@ -1,5 +1,5 @@
 # Wiki Media Cred: Data
-*[Future home notes for Wiki Media Cred data]*
+*[Future home of notes for Wiki Media Cred data]*
 
 ## Geo
 Wikidata SPARQL query for US Cities: https://w.wiki/6fkS
