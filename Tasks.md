@@ -1,5 +1,5 @@
 # Wiki Media Cred: Tasks
-*(Update: 2023-05025)*
+*(Update: 2023-05-25)*
 ## Wikidata entities
 Work on news-media items in Wikidata.
 ### Todo
@@ -23,7 +23,17 @@ Work on news-media items in Wikidata.
 * Use [“Run in Background”](https://www.wikidata.org/wiki/Help:QuickStatements#Using_QuickStatements_version_2_in_batch_mode) mode (for most batches).
 * Tool **cannot** add rank, try [wikibase-cli](https://github.com/maxlath/wikibase-cli) for `official website` URL.
 
-*Wikimedia User: <a href="https://www.wikidata.org/wiki/Special:Contributions/Hearvox">Hearvox contributions</a>*
+## Project Oasis
+### Todo
+* Merge [Project Oasis](https://www.projectnewsoasis.com/) dataset (of digital news outlets) with UNC Digital database, from [News Desert](https://www.usnewsdeserts.com/) project (1100 news outlets).
+* Find QIDs for news outlets (150).
+* For found QIDs with same name but different than news-outlet (40), add `different from` statement (see below).
+* Create new items for news outlets not in WD (900).
+* Create new items in Internet Domains Wikibase. 
+
+different from (P1889): https://www.wikidata.org/wiki/Property:P1889
+with qualifier: 
+applies to name of object (P8338): https://www.wikidata.org/wiki/Property:P8338
 
 ## Wikipedia articles
 ### Todo
@@ -40,6 +50,9 @@ Work on news-media items in Wikidata.
 ### Ref
 * Property proposal: https://www.wikidata.org/wiki/Wikidata:Property_proposal/assessed_source_reliability 
 * Schema: https://www.wikidata.org/wiki/Wikidata:WikiProject_Source_Reliability#Data_model
+
+-----
+*Wikimedia User: <a href="https://www.wikidata.org/wiki/Special:Contributions/Hearvox">Hearvox contributions</a>*
 * VSAFE (example: [source assessement](https://www.wikidata.org/wiki/Q1542536#P1343))
 
 ## Internet Domains Wikibase
