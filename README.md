@@ -2,17 +2,34 @@
 *[drafting…]*  
 Goal: Turn Wikimedia into a news-site credibility tool.
 
-These are the resources and data diary for the <a href="https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec">Wikicred/Iffy.news project</a>, adding news-site credibility indicators into Wikidata/Wikipedia.
+These are the resources and data diary for the <a href="https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec">Wikicred/Iffy.news project</a>, adding news-site credibility indicators, found in external databases, into Wikidata/Wikipedia. The datasets I had access to were mostly U.S. and English. Those with news-media data for other countries and languages may find this repo helpful.
 
-The following workflow comes from trial and many errors in my attempts to:
-* Locate news-media items in Wikidata (working with U.S. only).
-* Add items for news media not in Wikidata (found in external datasets).
-* Add and standardize Wikidata statements for news-media domain names (used to match Wikidata items with entries in external media databases).
-* Add external-dataset info into Wikidata for news-media items, especally crediility indicaters (e.g., press-association membership, street address).
+The following workflow came from trial and many errors in my attempts to:
+* Find news-media items in Wikidata.
+* Create new items for news-media not in Wikidata.
+* Match news-media items in Wikidata with their domain names (used to relate Wikidata items with their entries in external datasets).  
+* Add data from external media datasets into Wikidata (e.g., crediility indicaters like press-association membership and street address).
 
-I gathered Wikidata items with the [Wikidata Query Service](https://query.wikidata.org/) (example search: [`United States` `news media`](https://w.wiki/6k32)), added data using [Quick Statements](https://quickstatements.toolforge.org/#/) (example update: [`place of publication`](https://quickstatements.toolforge.org/#/batch/128928)) and [wikibase-cli](https://github.com/maxlath/wikibase-cli), and merged Wikidata with external datasets mostly in [Google Sheets](https://docs.google.com/spreadsheets/d/1iriRBIkiE2dyhoT1ZWCVGcHhAWvdXZTA_1hBIF-_B5A/edit#gid=266534370), helped by the [Wikipedia and Wikidata Tools](https://workspace.google.com/marketplace/app/wikipedia_and_wikidata_tools/595109124715) sheets add-on.
+Tools: I gathered Wikidata items with the [Wikidata Query Service](https://query.wikidata.org/) (example search: [`United States` `news media`](https://w.wiki/6k32)), added data using [Quick Statements](https://quickstatements.toolforge.org/#/) (example update: [`place of publication`](https://quickstatements.toolforge.org/#/batch/128928)) and [wikibase-cli](https://github.com/maxlath/wikibase-cli), and merged Wikidata with external datasets mostly in [Google Sheets](https://docs.google.com/spreadsheets/d/1iriRBIkiE2dyhoT1ZWCVGcHhAWvdXZTA_1hBIF-_B5A/edit#gid=266534370), helped by the [Wikipedia and Wikidata Tools](https://workspace.google.com/marketplace/app/wikipedia_and_wikidata_tools/595109124715) sheets add-on.
 
-After starting over several times, I remembered it's best to make each step replicable and reversable — to back out of any import mess I made. To do this, I usually added a column with a sortable flag, indicating the source of imported data — especialy useful for tracking where I found things like circulation estimates and domain names. As they (often don't) say in the tech world: Move slow and fix things.
+After starting over several times, I remembered my betters had taught me to make each step replicable and reversable — so I could back out of any import mess I made. To do this, I usually added a column with a sortable flag, indicating the source of imported data — especialy useful for tracking where I found things like circulation estimates and domain names. As they (often don't) say in the tech world: Move slow and fix things.
+
+## Think like Wikidata
+Wikidata stores stuctured data used in Wikipedia and other Wikimedia projects. It's a collection of [items](https://www.wikidata.org/wiki/Help:Items), "all the *things* in human knowledge, including topics, concepts, and objects." [The Denver Post (Q2668654)](https://www.wikidata.org/wiki/Q2668654) is an item. It has a label (its name), a short description ("daily newspaper in Denver, Colorado"), aliases (alternative names: "Denver Post | denverpost.com"), and a unique QID (Q + a number).  
+
+Items have [statements](https://www.wikidata.org/wiki/Help:Statements) about them, made with a [property](https://www.wikidata.org/wiki/Help:Properties) (P + a number) and a [value](https://www.wikidata.org/wiki/Help:Statements#Values): The Denver Post is an [instance of (P31)](https://www.wikidata.org/wiki/Property:P31) a
+[daily newspaper (Q1110794)](https://www.wikidata.org/wiki/Q1110794). Its [inception (P571)](https://www.wikidata.org/wiki/Property:P571) date was 1894. Its [Facebook ID (P2013)](https://www.wikidata.org/wiki/Property:P2013) is "denverpost".
+
+[official website (P856)](https://www.wikidata.org/wiki/Property:P856)
+Data type: External identifier
+Data type: Point in time
+https://www.denverpost.com/
+Identifiers
+The latter statement has a property known as an Identifier, [International Standard Serial Number (P236)](https://www.wikidata.org/wiki/Property:P236) Media Bias/Fact Check ID
+
+[subclass of (P279)](https://www.wikidata.org/wiki/Property:P279)
+
+
 
 ## Coordinate categories
 It was helpful to have all news media in Wikidata be discoverable under one category. Most were already labeled that: In Wiki-speak, the news-outlet had the property *instance of* ([`P31`](https://www.wikidata.org/wiki/Property:P31)), or a [`subclass of`](https://www.wikidata.org/wiki/Property:P279), the item [`news media`](https://www.wikidata.org/wiki/Q1193236)).
@@ -61,7 +78,7 @@ mindmap
 		id(women's press)
  ```
 
-*(See network view in [Wikidata Graph Builder]([url](https://angryloki.github.io/wikidata-graph-builder/?item=Q1193236&property=P279&mode=reverse&sc_color=%231c5ec3c4&sc_width=5).)*
+*(See network chart in [Wikidata Graph Builder](https://angryloki.github.io/wikidata-graph-builder/?item=Q1193236&property=P279&mode=reverse&sc_color=%231c5ec3c4&sc_width=5).)*
 
 *[Brief diff btwn property and item, instance and subclass]* A few news-outlets were instance of items that should new-media subclasses but weren't (e.g., [`news program`](https://www.wikidata.org/wiki/Q1358344) and  [`news magazine`](https://www.wikidata.org/wiki/Q1684600). I brought them into the fold (i.e., made them a `news media` subclass, or subclass of a `news media` subclass.)
 
