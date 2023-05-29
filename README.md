@@ -15,12 +15,15 @@ Tools: I gathered Wikidata items with the [Wikidata Query Service](https://query
 After starting over several times, I remembered my betters had taught me to make each step replicable and reversable — so I could back out of any import mess I made. To do this, I usually added a column with a sortable flag, indicating the source of imported data — especialy useful for tracking where I found things like circulation estimates and domain names. As they (often don't) say in the tech world: Move slow and fix things.
 
 ## Think like Wikidata
-Wikidata stores stuctured data used in Wikipedia and other Wikimedia projects. It's a collection of pages for [Items](https://www.wikidata.org/wiki/Help:Items), "all the *things* in human knowledge, including topics, concepts, and objects." One item is [`The Denver Post (Q2668654)`](https://www.wikidata.org/wiki/Q2668654). It has a label (its name), a unique QID (Q + a number), a short description ("daily newspaper in Denver, Colorado"), aliases (alternative names: "Denver Post | denverpost.com"), followed by a list of [Statements](https://www.wikidata.org/wiki/Q2668654#claims) about the item.  
+Wikidata stores stuctured data used in Wikipedia and other Wikimedia projects. It's a collection of pages for [Items](https://www.wikidata.org/wiki/Help:Items), "all the *things* in human knowledge, including topics, concepts, and objects." [`The Denver Post (Q2668654)`](https://www.wikidata.org/wiki/Q2668654) is an item. It has a label (its name), a unique QID (Q + a number), a short description ("daily newspaper in Denver, Colorado"), aliases (alternative names: "Denver Post | denverpost.com"), followed by a list of [Statements](https://www.wikidata.org/wiki/Q2668654#claims).  
 
-[Statements](https://www.wikidata.org/wiki/Help:Statements) describe the item by using a [Property](https://www.wikidata.org/wiki/Help:Properties) (P + a number) and its [Value](https://www.wikidata.org/wiki/Help:Statements#Values): The Denver Post is an [`instance of (P31)`](https://www.wikidata.org/wiki/Property:P31) a
-[`daily newspaper (Q1110794)`](https://www.wikidata.org/wiki/Q1110794). Its [`inception (P571)`](https://www.wikidata.org/wiki/Property:P571) date was 1894. Its [`official website (P856)`](https://www.wikidata.org/wiki/Property:P856) is https://www.denverpost.com/.
+[Statements](https://www.wikidata.org/wiki/Help:Statements) describe the item using a [Property](https://www.wikidata.org/wiki/Help:Properties) (P + a number) and its [Value](https://www.wikidata.org/wiki/Help:Statements#Values) (in the data type specified by the property):
 
-A property takes a specified data type as a value. The `instance of` property's data type is *Item*. For `inception`, it's *Point in time*. For `official website`, it's *URL*.
+| property | value | (data type) |
+| ------------- | ------------- |  ------------- |
+| [`instance of (P31)`](https://www.wikidata.org/wiki/Property:P31)  | [`daily newspaper (Q1110794)`](https://www.wikidata.org/wiki/Q1110794) | (Item) |
+| [`inception (P571)`](https://www.wikidata.org/wiki/Property:P571)  | 1892 |  (Point in time) |
+| [`official website (P856)`](https://www.wikidata.org/wiki/Property:P856) | https://www.denverpost.com/ | (URL) |
 
 News-media items often have another list under the header [Identifiers](https://www.wikidata.org/wiki/Q2668654#identifiers) — are properties with the data type of *External identifier*, like [`International Standard Serial Number (P236)`](https://www.wikidata.org/wiki/Property:P236) and [`Facebook ID (P2013)`](https://www.wikidata.org/wiki/Property:P2013).
 
