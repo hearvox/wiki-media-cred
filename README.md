@@ -22,7 +22,7 @@ Wikidata stores stuctured data used in Wikipedia and other Wikimedia projects. I
 
 A property takes a specified data type as a value. The `instance of` property's data type is *Item*. For `inception`, it's *Point in time*. For `official website`, it's *URL*.
 
-Some items another list under the header [Identifiers](https://www.wikidata.org/wiki/Q2668654#identifiers), which are properties with the data type of *External identifier*, like [`International Standard Serial Number (P236)`](https://www.wikidata.org/wiki/Property:P236) and [`Facebook ID (P2013)`](https://www.wikidata.org/wiki/Property:P2013).
+News-media items often have another list under the header [Identifiers](https://www.wikidata.org/wiki/Q2668654#identifiers) — are properties with the data type of *External identifier*, like [`International Standard Serial Number (P236)`](https://www.wikidata.org/wiki/Property:P236) and [`Facebook ID (P2013)`](https://www.wikidata.org/wiki/Property:P2013).
 
 Some items are a class of things, which can classified into a hierarchy: The [`daily newspaper (Q1110794)`](https://www.wikidata.org/wiki/Q1110794) item is a [`subclass of (P279)`](https://www.wikidata.org/wiki/Property:P279) the [`newspaper (Q11032)`](https://www.wikidata.org/wiki/Q11032) item, which is a subclass of [`news media (Q1193236)`](https://www.wikidata.org/wiki/Q1193236), a subclass of [`mass media (Q11033)`](https://www.wikidata.org/wiki/Q11033), a subclass of [`media (Q340169)`](https://www.wikidata.org/wiki/Q340169).
 
