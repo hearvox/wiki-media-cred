@@ -20,7 +20,7 @@ Wikidata stores stuctured data used in Wikipedia and other Wikimedia projects. I
 [Statements](https://www.wikidata.org/wiki/Help:Statements) describe the item by using a [Property](https://www.wikidata.org/wiki/Help:Properties) (P + a number) and its [Value](https://www.wikidata.org/wiki/Help:Statements#Values): The Denver Post is an [`instance of (P31)`](https://www.wikidata.org/wiki/Property:P31) a
 [`daily newspaper (Q1110794)`](https://www.wikidata.org/wiki/Q1110794). Its [`inception (P571)`](https://www.wikidata.org/wiki/Property:P571) date was 1894. Its [`official website (P856)`](https://www.wikidata.org/wiki/Property:P856) is https://www.denverpost.com/.
 
-A property takes a specified data type as a value. The *instance of* property's data type is *Item*. For *inception*, it's *Point in time*. For *official website*, it's *URL*.
+A property takes a specified data type as a value. The `instance of` property's data type is *Item*. For `inception`, it's *Point in time*. For `official website`, it's *URL*.
 
 Some items another list under the header [Identifiers](https://www.wikidata.org/wiki/Q2668654#identifiers), which are properties with the data type of *External identifier*, like [`International Standard Serial Number (P236)`](https://www.wikidata.org/wiki/Property:P236) and [`Facebook ID (P2013)`](https://www.wikidata.org/wiki/Property:P2013).
 
