@@ -30,7 +30,9 @@ Items like news media often have another list under the heading [Identifiers](ht
 An item can be a class of things, which can be classified into a hierarchy: The [`daily newspaper (Q1110794)`](https://www.wikidata.org/wiki/Q1110794) item is a [`subclass of (P279)`](https://www.wikidata.org/wiki/Property:P279) the [`newspaper (Q11032)`](https://www.wikidata.org/wiki/Q11032) item, which is a subclass of [`news media (Q1193236)`](https://www.wikidata.org/wiki/Q1193236), a subclass of [`mass media (Q11033)`](https://www.wikidata.org/wiki/Q11033), a subclass of [`media (Q340169)`](https://www.wikidata.org/wiki/Q340169).
 
 ## Coordinate categories
-For this project, it was convenient to have all news media in Wikidata be discoverable by one search: items that instance of, or instance of a subclass of, [`news media`](https://www.wikidata.org/wiki/Q1193236)). Most already were. I corrected a few outlier items so those were too (e.g., made [`news program`](https://www.wikidata.org/wiki/Q1358344) and [`news magazine`](https://www.wikidata.org/wiki/Q1684600) subclasses of `news media`).
+The [Wikidata Query Service](https://query.wikidata.org/) searches Wikidata using the [SPARQL](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help) language. Queries must be effecient because its searches timeout after about 40 seconds.
+
+It's very efficient to have all news-media outlets in Wikidata be an instance of, or instance of a subclass of, [`news media`](https://www.wikidata.org/wiki/Q1193236). Most already were. But some news outlets weren't showing up because they were instances of classes that weren't in the `news media` heirarchy (e.g., [`investigative journalism (Q1127717)`](https://www.wikidata.org/wiki/Q1127717), [`news program`](https://www.wikidata.org/wiki/Q1358344), [`news magazine`](https://www.wikidata.org/wiki/Q1684600). To those I added a statement making them a `news media` subclass.
 ```mermaid
 mindmap
 	root((news media))
@@ -75,10 +77,11 @@ mindmap
 			newspaper +202
 		id(women's press)
  ```
+<em style="font-size: 0.8rem;">News media subclasses, 2 levels down</em>
 
 *(See network chart in [Wikidata Graph Builder](https://angryloki.github.io/wikidata-graph-builder/?item=Q1193236&property=P279&mode=reverse&sc_color=%231c5ec3c4&sc_width=5).)*
 
-*[Brief diff btwn property and item, instance and subclass]* A few news-outlets were instance of items that should new-media subclasses but weren't (e.g., [`news program`](https://www.wikidata.org/wiki/Q1358344) and  [`news magazine`](https://www.wikidata.org/wiki/Q1684600). I brought them into the fold (i.e., made them a `news media` subclass, or subclass of a `news media` subclass.)
+*[Briefly explain diff btwn instance and subclass]* A few news-outlets were instance of items that should new-media subclasses but weren't (e.g., [`news program`](https://www.wikidata.org/wiki/Q1358344) and  [`news magazine`](https://www.wikidata.org/wiki/Q1684600). I brought them into the fold (i.e., made them a `news media` subclass, or subclass of a `news media` subclass.)
 
 THe classification wrangling werem't something like this:
 1. Get all news outlets under one general category: `news media`.
@@ -89,16 +92,16 @@ THe classification wrangling werem't something like this:
 ## Match domains
 
 ## Crowd-wisdom classes
-*[Find out which properties WD folk use most often for news-media items. Then go with the wiki-crowd wisdom in deciding which property/class to use.]*
+*[Briefly explain: Find out which properties WD folk use most often for news-media items. Then go with the wiki-crowd wisdom in deciding which property/class to use.]*
 
 ### Put publications in their place
-*[The city was most often a `place of publication`, but sometimes was `headquarters location` (P159), `location` (P276), and/or `located in the administrative territorial entity` (P131). Done: Add `place of publication` to all news media. Todo: Add `street address` (P6375) (use format in prop's example: street, city, state, zip)]*
+*[Briefly explain: The city was most often a `place of publication`, but sometimes was `headquarters location` (P159), `location` (P276), and/or `located in the administrative territorial entity` (P131). Done: Add `place of publication` to all news media. Todo: Add `street address` (P6375) (use format in prop's example: street, city, state, zip)]*
 
 ### Prepare for the End Times
-*[The date a publicaton ceased was 90% in dissolved, abolished or demolished (`P576`) statements, with the rest as end time (`P582`). Done: Copy all dates in `end time` into `dissolved…` (with precision: day, month, or year).]*
+*[Briefly explain: The date a publicaton ceased was 90% in dissolved, abolished or demolished (`P576`) statements, with the rest as end time (`P582`). Done: Copy all dates in `end time` into `dissolved…` (with precision: day, month, or year).]*
 
 ### For members only
-*[Membership in a press asscoiation was almost always `member of` ([P463](https://www.wikidata.org/wiki/Property:P463)) but a few times `affiliation` ([P1416](https://www.wikidata.org/wiki/Property:P1416)).]*
+*[Briefly explain: Membership in a press asscoiation was almost always `member of` ([P463](https://www.wikidata.org/wiki/Property:P463)) but a few times `affiliation` ([P1416](https://www.wikidata.org/wiki/Property:P1416)).]*
 
 
 
@@ -122,4 +125,6 @@ https://statesnewsroom.com/newsrooms/
 Inter American Press Association ([`Q1626261`](https://www.wikidata.org/wiki/Property:P463)) ([SPARQL](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3Fmember%20%3FmemberLabel%20%3Faffil%20%3FaffilLabel%0AWHERE%20%7B%0A%20%20%7B%3Fitem%20wdt%3AP1416%7Cwdt%3AP463%20wd%3AQ1626261%20.%7D%0A%20%20OPTIONAL%20%7B%3Fitem%20wdt%3AP463%20%3Fmember%20.%7D%0A%20%20OPTIONAL%20%7B%3Fitem%20wdt%3AP1416%20%3Faffil%20.%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%7D%0AORDER%20BY%20ASC%28%3FitemLabel%29%20LIMIT%2040000))
 
 *place of publication* ([`P291`](https://www.wikidata.org/wiki/Property:P291))
+
+In SPARQL: [`{?item wdt:P31/wdt:P279* wd:Q1193236 .}`](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3FitemDescription%20%3FitemAltLabel%0AWHERE%20%7B%0A%20%20%7B%3Fitem%20wdt%3AP31%2Fwdt%3AP279%2a%20wd%3AQ1193236%20.%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3Fitem%20rdfs%3Alabel%20%3FitemLabel%20.%0A%7D%0AORDER%20BY%20ASC%28%3FitemLabel%29%20LIMIT%20250000))
 -->
