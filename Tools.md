@@ -1,9 +1,11 @@
 # WMC: Tools
 
 ## API
-* Wikidata Query Service: https://query.wikidata.org/ ([Help](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help) | [Examples](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples) | [Advanced examples](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples/advanced) | [Request a Query](https://www.wikidata.org/wiki/Wikidata:Request_a_query) | [Archive of requests](https://www.wikidata.org/wiki/Wikidata:Request_a_query/Archive)
+* Wikidata Query Service: https://query.wikidata.org/
+  * [Help](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help) | [Examples](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples) | [Advanced examples](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples/advanced)
+  * [Request a Query](https://www.wikidata.org/wiki/Wikidata:Request_a_query) | [Archive of requests](https://www.wikidata.org/wiki/Wikidata:Request_a_query/Archive)
 * Quick Statements: https://quickstatements.toolforge.org/#/
-* * wikibase-cli: https://github.com/maxlath/wikibase-cli
+* wikibase-cli: https://github.com/maxlath/wikibase-cli
 * Cradle: https://cradle.toolforge.org/#/ (Example: https://cradle.toolforge.org/#/subject/newspaper)
 * Mix'n'Match (match datasets to Wikidata): https://mix-n-match.toolforge.org/#/import/
 * Wikipedia and Wikidata Tools (G-sheet add-on): https://workspace.google.com/marketplace/app/wikipedia_and_wikidata_tools/595109124715
