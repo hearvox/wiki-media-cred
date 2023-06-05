@@ -2,7 +2,7 @@
 
 ## API
 * Wikidata Query Service: https://query.wikidata.org/
-  * [Help](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help) | [Examples](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples) | [Advanced examples](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples/advanced)
+  * [Help](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help) | [Examples](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples) | [Advanced examples](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples/advanced) | [SPARQL Tutorial](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial)
   * [Request a Query](https://www.wikidata.org/wiki/Wikidata:Request_a_query) | [Archive of requests](https://www.wikidata.org/wiki/Wikidata:Request_a_query/Archive)
 * Quick Statements: https://quickstatements.toolforge.org/#/
 * wikibase-cli: https://github.com/maxlath/wikibase-cli
