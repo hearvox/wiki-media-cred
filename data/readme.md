@@ -1,7 +1,7 @@
 # Wiki Media Cred: Data
 Contents of TSVs in /data/ dir:
 * Wikipedia: [US newspapers](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikipedia-us-newspapers.tsv), auto-compiled ([code](https://github.com/hearvox/wiki-media-cred/blob/main/code/wikipedia-us-newspapers.php)) from [state listings](https://en.wikipedia.org/wiki/Category:Lists_of_newspapers_published_in_the_United_States_by_state), with WD QID and WP path and page ID.
-* Wikidata: [US state press associations](https://github.com/hearvox/wiki-media-cred/blob/main/data/wd-press-assoc.tsv), added/updated via [QuickStatements](https://github.com/hearvox/wiki-media-cred/blob/main/code/wd-press-assoc-qs.sparql)).
+* Wikidata: [US state press associations](https://github.com/hearvox/wiki-media-cred/blob/main/data/wd-press-assoc.tsv), added/updated via [QuickStatements](https://github.com/hearvox/wiki-media-cred/blob/main/code/wd-press-assoc-qs.sql)).
 * Wikidata: [US cities and towns](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikidata-us-cities.tsv), with QIDs (also in [csv](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikidata-us-cities.csv)).
 * Wikidata: [US states](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikidata-us-states.tsv), with QID, lat/lon, FIPS and abbreviations (two-letter and AP).
 
