@@ -10,14 +10,23 @@ The following workflow came from trial and many errors in my attempts to:
 * Match news-media items in Wikidata with their domain names (used to relate Wikidata items with their entries in external datasets).  
 * Add data from external media datasets into Wikidata (e.g., crediility indicaters like press-association membership and street address).
 
-Tools: I gathered Wikidata items with the [Wikidata Query Service](https://query.wikidata.org/) searches (example: [`news media` in the `United States`](https://w.wiki/6k32)), added data using [Quick Statements](https://quickstatements.toolforge.org/#/) (example: [add `place of publication`](https://quickstatements.toolforge.org/#/batch/128928)) and [wikibase-cli](https://github.com/maxlath/wikibase-cli), and merged Wikidata with external datasets mostly in [Google Sheets](https://docs.google.com/spreadsheets/d/1iriRBIkiE2dyhoT1ZWCVGcHhAWvdXZTA_1hBIF-_B5A/edit#gid=266534370), helped by the [Wikipedia and Wikidata Tools](https://workspace.google.com/marketplace/app/wikipedia_and_wikidata_tools/595109124715) sheets add-on.
+## Data dir
+The [/data/ directory](https://github.com/hearvox/wiki-media-cred/blob/main/data/) stores TSVs of useful info created for this project:
+* Wikipedia: [US newspapers](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikipedia-us-newspapers.tsv), auto-compiled ([code](https://github.com/hearvox/wiki-media-cred/blob/main/code/wikipedia-us-newspapers.php)) from [state listings](https://en.wikipedia.org/wiki/Category:Lists_of_newspapers_published_in_the_United_States_by_state), with WD QID and WP path and page ID.
+* Wikidata: [US state press associations](https://github.com/hearvox/wiki-media-cred/blob/main/data/wd-press-assoc.tsv), added/updated via [QuickStatements](https://github.com/hearvox/wiki-media-cred/blob/main/code/wd-press-assoc-qs.sql)).
+* Wikidata: [US cities and towns](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikidata-us-cities.tsv), with QIDs (also in [csv](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikidata-us-cities.csv)).
+* Wikidata: [US states](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikidata-us-states.tsv), with QID, lat/lon, FIPS and abbreviations (two-letter and AP).
+
+## Tools used
+I gathered Wikidata items with the [Wikidata Query Service](https://query.wikidata.org/) searches (example: [`news media` in the `United States`](https://w.wiki/6k32)), added data using [Quick Statements](https://quickstatements.toolforge.org/#/) (example: [add `place of publication`](https://quickstatements.toolforge.org/#/batch/128928)) and [wikibase-cli](https://github.com/maxlath/wikibase-cli), and merged Wikidata with external datasets mostly in [Google Sheets](https://docs.google.com/spreadsheets/d/1iriRBIkiE2dyhoT1ZWCVGcHhAWvdXZTA_1hBIF-_B5A/edit#gid=266534370), helped by the [Wikipedia and Wikidata Tools](https://workspace.google.com/marketplace/app/wikipedia_and_wikidata_tools/595109124715) sheets add-on.
 
 After starting over several times, I remembered my betters taught me to make each step replicable and reversable — so I could back out of any import mess I made. To do this, I usually added a column with a sortable flag, indicating the source of imported data — especialy useful for tracking where things like circulation estimates and domain names came from. As they (should) say in the tech world: Move slow and fix things.
 
-## Think like Wikidata
-Wikidata stores stuctured data used in Wikipedia and other [Wikimedia](https://www.wikimedia.org/) projects. It's a collection of pages for [Items](https://www.wikidata.org/wiki/Help:Items), "all the *things* in human knowledge, including topics, concepts, and objects."
+## How Wikidata thinks
+Wikidata stores stuctured data used in Wikipedia and other [Wikimedia](https://www.wikimedia.org/) projects. It's a collection of entries for [Items](https://www.wikidata.org/wiki/Help:Items), "all the *things* in human knowledge, including topics, concepts, and objects." Each Item has its own page, URL, and unique QID (Q + a number).
 
-[`The Denver Post (Q2668654)`](https://www.wikidata.org/wiki/Q2668654) is an item. It has a label (its name), a unique QID (Q + a number), a short description ("daily newspaper in Denver, Colorado"), aliases (alternative names: "Denver Post | denverpost.com"). That's followed by [a list](https://www.wikidata.org/wiki/Q2668654#claims) of [Statements](https://www.wikidata.org/wiki/Help:Statements) about the item, using a [Property](https://www.wikidata.org/wiki/Help:Properties) (P + a number) and a [Value](https://www.wikidata.org/wiki/Help:Statements#Values) (in the property's specified data type):
+### Property values
+[`The Denver Post (Q2668654)`](https://www.wikidata.org/wiki/Q2668654) is an item. It has a label (its name), QID , a short description ("daily newspaper in Denver, Colorado"), and aliases (alternative names: "Denver Post | denverpost.com"). Those [are followed](https://www.wikidata.org/wiki/Q2668654#claims) by a list of [Statements](https://www.wikidata.org/wiki/Help:Statements) about the item. Statements have a [Property](https://www.wikidata.org/wiki/Help:Properties) (P + a number) and a [Value](https://www.wikidata.org/wiki/Help:Statements#Values) (in that property's specified data type):
 
 | property | value | (data type) |
 | ------------- | ------------- |  ------------- |
@@ -25,14 +34,15 @@ Wikidata stores stuctured data used in Wikipedia and other [Wikimedia](https://w
 | [`inception (P571)`](https://www.wikidata.org/wiki/Property:P571)  | 1892 |  (Point in time) |
 | [`official website (P856)`](https://www.wikidata.org/wiki/Property:P856) | https://www.denverpost.com/ | (URL) |
 
-Items like news media often have another list under the heading [Identifiers](https://www.wikidata.org/wiki/Q2668654#identifiers), which are properties with a data type called *External identifier*. Example are [`International Standard Serial Number (P236)`](https://www.wikidata.org/wiki/Property:P236) and [`Facebook ID (P2013)`](https://www.wikidata.org/wiki/Property:P2013).
+News media often have another list of statements under the heading [Identifiers](https://www.wikidata.org/wiki/Q2668654#identifiers). Those are properties with a data type called *External identifier*. Examples  are [`International Standard Serial Number (P236)`](https://www.wikidata.org/wiki/Property:P236) and [`Facebook ID (P2013)`](https://www.wikidata.org/wiki/Property:P2013).
 
-An item can be a class of things, which can be classified into a hierarchy: The [`daily newspaper (Q1110794)`](https://www.wikidata.org/wiki/Q1110794) item is a [`subclass of (P279)`](https://www.wikidata.org/wiki/Property:P279) the [`newspaper (Q11032)`](https://www.wikidata.org/wiki/Q11032) item, which is a subclass of [`news media (Q1193236)`](https://www.wikidata.org/wiki/Q1193236), a subclass of [`mass media (Q11033)`](https://www.wikidata.org/wiki/Q11033), a subclass of [`media (Q340169)`](https://www.wikidata.org/wiki/Q340169).
+### Class concepts
+An item can be more than just one thing. It can be a concept, a class of things, which can be classified into a hierarchy: The item [`daily newspaper (Q1110794)`](https://www.wikidata.org/wiki/Q1110794) is a [`subclass of (P279)`](https://www.wikidata.org/wiki/Property:P279) the item [`newspaper (Q11032)`](https://www.wikidata.org/wiki/Q11032) item, which is a subclass of [`written news media (Q17172633)`](https://www.wikidata.org/wiki/Q17172633), a subcalss of [`news media (Q1193236)`](https://www.wikidata.org/wiki/Q1193236), a subclass of [`mass media (Q11033)`](https://www.wikidata.org/wiki/Q11033), a subclass of [`media (Q340169)`](https://www.wikidata.org/wiki/Q340169).
 
 ## Coordinate categories
-The [Wikidata Query Service](https://query.wikidata.org/) searches Wikidata using the [SPARQL](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help) language. Queries must be effecient because its searches timeout after about 40 seconds.
+The [Wikidata Query Service](https://query.wikidata.org/) searches Wikidata using the [SPARQL](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help) language. Queries must be effecient because its searches timesout in 60 seconds.
 
-It's very efficient to have all news-media outlets in Wikidata be an instance of, or instance of a subclass of, [`news media`](https://www.wikidata.org/wiki/Q1193236). Most already were. But some news outlets weren't showing up because they were instances of classes that weren't in the `news media` heirarchy (e.g., [`investigative journalism (Q1127717)`](https://www.wikidata.org/wiki/Q1127717), [`news program`](https://www.wikidata.org/wiki/Q1358344), [`news magazine`](https://www.wikidata.org/wiki/Q1684600). To those I added a statement making them a `news media` subclass.
+For this project, it was convenient to have all news-media outlets in Wikidata be an instance of, or instance of a subclass of, [`news media`](https://www.wikidata.org/wiki/Q1193236). Most already were. But some news outlets weren't showing up because they were instances of classes that weren't in the `news media` heirarchy (e.g., [`investigative journalism (Q1127717)`](https://www.wikidata.org/wiki/Q1127717), [`news program`](https://www.wikidata.org/wiki/Q1358344), [`news magazine`](https://www.wikidata.org/wiki/Q1684600). I fixed those by added statement making them a `news media` subclass.
 ```mermaid
 mindmap
 	root((news media))
@@ -41,7 +51,7 @@ mindmap
 			newswire
 		id(newsletter)
 			municipal newsletter
-			night letter +1
+			night letter (1>)
 			school newsletter
 			stock exchange newsletter
 			Wikimedia newsletter
@@ -61,11 +71,11 @@ mindmap
 		id(news media in the United States)
 		id(news website)
 			fake news website
-			news aggregation website +2
+			news aggregation website (2>)
 			online newspaper
 			sports news website
 			television news website
-			video game news website +1
+			video game news website (1>)
 		id(talk radio)
 			conservative talk radio
 			Internet talk radio
@@ -74,7 +84,7 @@ mindmap
 		id(written news media)
 			Cooperative press
 			Famille de presse
-			newspaper +202
+			newspaper (202>)
 		id(women's press)
  ```
 <em style="font-size: 0.8rem;">News media subclasses, 2 levels down</em>
@@ -83,11 +93,11 @@ mindmap
 
 *[Briefly explain diff btwn instance and subclass]* A few news-outlets were instance of items that should new-media subclasses but weren't (e.g., [`news program`](https://www.wikidata.org/wiki/Q1358344) and  [`news magazine`](https://www.wikidata.org/wiki/Q1684600). I brought them into the fold (i.e., made them a `news media` subclass, or subclass of a `news media` subclass.)
 
-THe classification wrangling werem't something like this:
+The classification wrangling werem't something like this:
 1. Get all news outlets under one general category: `news media`.
 2. Get subclasses into logical categories (one or two levels down).
 3. Change specific new-outlets improperly assigned `subclass` to 'instance of`.
-4. Names for unlabled subclasses (one or two levels down), consulting the item's Wikipedia article or `official website`.
+4. Label unlabled subclasses (one or two levels down), consulting the item's Wikipedia article or `official website` for the best name.
 
 ## Match domains
 
