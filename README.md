@@ -37,7 +37,7 @@ Wikidata stores stuctured data used in Wikipedia and other [Wikimedia](https://w
 News media often have another list of statements under the heading [Identifiers](https://www.wikidata.org/wiki/Q2668654#identifiers). Those are properties with a data type called *External identifier*. Examples  are [`International Standard Serial Number (P236)`](https://www.wikidata.org/wiki/Property:P236) and [`Facebook ID (P2013)`](https://www.wikidata.org/wiki/Property:P2013).
 
 ### Class concepts
-An item can be more than just one thing. It can be a concept, a class of things, which can be classified into a hierarchy: The item [`daily newspaper (Q1110794)`](https://www.wikidata.org/wiki/Q1110794) is a [`subclass of (P279)`](https://www.wikidata.org/wiki/Property:P279) the item [`newspaper (Q11032)`](https://www.wikidata.org/wiki/Q11032) item, which is a subclass of [`written news media (Q17172633)`](https://www.wikidata.org/wiki/Q17172633), a subcalss of [`news media (Q1193236)`](https://www.wikidata.org/wiki/Q1193236), a subclass of [`mass media (Q11033)`](https://www.wikidata.org/wiki/Q11033), a subclass of [`media (Q340169)`](https://www.wikidata.org/wiki/Q340169).
+An item can be more than just one thing. It can be a concept, a class of things, which can be classified into a hierarchy: The item [`daily newspaper (Q1110794)`](https://www.wikidata.org/wiki/Q1110794) is a [`subclass of (P279)`](https://www.wikidata.org/wiki/Property:P279) the item [`newspaper (Q11032)`](https://www.wikidata.org/wiki/Q11032) item. That's a subclass of [`written news media (Q17172633)`](https://www.wikidata.org/wiki/Q17172633), which is a subclass of [`news media (Q1193236)`](https://www.wikidata.org/wiki/Q1193236) (a subclass of [`mass media (Q11033)`](https://www.wikidata.org/wiki/Q11033), a subclass of [`media (Q340169)`](https://www.wikidata.org/wiki/Q340169)…).
 
 ## Coordinate categories
 The [Wikidata Query Service](https://query.wikidata.org/) searches Wikidata using the [SPARQL](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help) language. Queries must be effecient because its searches timesout in 60 seconds.
@@ -86,7 +86,7 @@ mindmap
 			Famille de presse
 			newspaper 202>
 		id(women's press)
- ```
+```
 <em style="font-size: 0.8rem;">News media subclasses, 2 levels down</em>
 
 *(See network chart in [Wikidata Graph Builder](https://angryloki.github.io/wikidata-graph-builder/?item=Q1193236&property=P279&mode=reverse&sc_color=%231c5ec3c4&sc_width=5).)*
