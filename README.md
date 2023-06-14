@@ -2,7 +2,7 @@
 *[drafting…]*  
 Goal: Turn Wikimedia into a news-site credibility tool.
 
-These are the resources and data diary for the <a href="https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec">Wikicred/Iffy.news project</a>, adding news-site credibility indicators, found in external databases, into Wikidata/Wikipedia. The datasets I had access to were mostly U.S. and English. Those with news-media data for other countries and languages may find this repo helpful.
+These are resources and a data diary for the <a href="https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec">Wikicred/Iffy.news project</a>, adding news-site credibility indicators, found in external databases, into Wikidata/Wikipedia. The datasets I had access to were mostly U.S. and English. Those with news-media data for other countries and languages may find this repo helpful.
 
 The following workflow came from trial and many errors in my attempts to:
 * Find news-media items in Wikidata.
@@ -10,12 +10,13 @@ The following workflow came from trial and many errors in my attempts to:
 * Match news-media items in Wikidata with their domain names (used to relate Wikidata items with their entries in external datasets).  
 * Add data from external media datasets into Wikidata (e.g., crediility indicaters like press-association membership and street address).
 
-## Data dir
-The [/data/ directory](https://github.com/hearvox/wiki-media-cred/blob/main/data/) stores TSVs of useful info created for this project:
+## Data dumps
+Useful info created for this project (stored in the [/data directory](https://github.com/hearvox/wiki-media-cred/blob/main/data/) and elsewhere) includes:
 * Wikipedia: [US newspapers](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikipedia-us-newspapers.tsv), auto-compiled ([code](https://github.com/hearvox/wiki-media-cred/blob/main/code/wikipedia-us-newspapers.php)) from [state listings](https://en.wikipedia.org/wiki/Category:Lists_of_newspapers_published_in_the_United_States_by_state), with WD QID and WP path and page ID.
 * Wikidata: [US state press associations](https://github.com/hearvox/wiki-media-cred/blob/main/data/wd-press-assoc.tsv), added/updated via [QuickStatements](https://github.com/hearvox/wiki-media-cred/blob/main/code/wd-press-assoc-qs.sql)).
 * Wikidata: [US cities and towns](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikidata-us-cities.tsv), with QIDs (also in [csv](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikidata-us-cities.csv)).
 * Wikidata: [US states](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikidata-us-states.tsv), with QID, lat/lon, FIPS and abbreviations (two-letter and AP).
+* Wikidata: [Identfiers](https://github.com/hearvox/wiki-media-cred/blob/main/Identifers.md), news-outlet references at external sites.
 
 ## Tools used
 I gathered Wikidata items with the [Wikidata Query Service](https://query.wikidata.org/) searches (example: [`news media` in the `United States`](https://w.wiki/6k32)), added data using [Quick Statements](https://quickstatements.toolforge.org/#/) (example: [add `place of publication`](https://quickstatements.toolforge.org/#/batch/128928)) and [wikibase-cli](https://github.com/maxlath/wikibase-cli), and merged Wikidata with external datasets mostly in [Google Sheets](https://docs.google.com/spreadsheets/d/1iriRBIkiE2dyhoT1ZWCVGcHhAWvdXZTA_1hBIF-_B5A/edit#gid=266534370), helped by the [Wikipedia and Wikidata Tools](https://workspace.google.com/marketplace/app/wikipedia_and_wikidata_tools/595109124715) sheets add-on.
