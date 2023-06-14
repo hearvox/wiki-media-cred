@@ -51,7 +51,7 @@ mindmap
 			newswire
 		id(newsletter)
 			municipal newsletter
-			night letter (1>)
+			night letter 1>
 			school newsletter
 			stock exchange newsletter
 			Wikimedia newsletter
@@ -71,11 +71,11 @@ mindmap
 		id(news media in the United States)
 		id(news website)
 			fake news website
-			news aggregation website (2>)
+			news aggregation website 2>
 			online newspaper
 			sports news website
 			television news website
-			video game news website (1>)
+			video game news website 1>
 		id(talk radio)
 			conservative talk radio
 			Internet talk radio
@@ -84,7 +84,7 @@ mindmap
 		id(written news media)
 			Cooperative press
 			Famille de presse
-			newspaper (202>)
+			newspaper 202>
 		id(women's press)
  ```
 <em style="font-size: 0.8rem;">News media subclasses, 2 levels down</em>
