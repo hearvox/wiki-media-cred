@@ -35,7 +35,7 @@ Wikidata stores stuctured data used in Wikipedia and other [Wikimedia](https://w
 | [`inception (P571)`](https://www.wikidata.org/wiki/Property:P571)  | 1892 |  (Point in time) |
 | [`official website (P856)`](https://www.wikidata.org/wiki/Property:P856) | https://www.denverpost.com/ | (URL) |
 
-News media often have a separate [list of statements](https://www.wikidata.org/wiki/Q2668654#identifiers) under the heading [Identifiers](https://www.wikidata.org/wiki/Q2668654#identifiers). Those properties have a data type called *External identifier*, for example, [`Facebook ID (P2013)`](https://www.wikidata.org/wiki/Property:P2013) and [`ISSN (P236)`](https://www.wikidata.org/wiki/Property:P236), the International Standard Ser  1Z =============`al Number.
+News media often have a separate [list of statements](https://www.wikidata.org/wiki/Q2668654#identifiers) under the heading [Identifiers](https://www.wikidata.org/wiki/Q2668654#identifiers). Those properties have a data type called *External identifier*, for example, [`Facebook ID (P2013)`](https://www.wikidata.org/wiki/Property:P2013) and [`ISSN (P236)`](https://www.wikidata.org/wiki/Property:P236), the International Standard Serial Number.
 
 ### Class conciousness
 An item isn't always one thing. It can be a concept: a [Class](https://www.wikidata.org/wiki/User:TomT0m/Classification) of things, with one item being a [`subclass of (P279)`](https://www.wikidata.org/wiki/Property:P279) of another, making a heirarchy. Each of these newsy items is a subclass of the one to its right:
