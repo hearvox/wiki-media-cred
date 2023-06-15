@@ -38,11 +38,11 @@ Wikidata stores stuctured data used in Wikipedia and other [Wikimedia](https://w
 News media often have a separate [list of statements](https://www.wikidata.org/wiki/Q2668654#identifiers) under the heading [Identifiers](https://www.wikidata.org/wiki/Q2668654#identifiers). Those properties have a data type called *External identifier*, for example, [`Facebook ID (P2013)`](https://www.wikidata.org/wiki/Property:P2013) and [`ISSN (P236)`](https://www.wikidata.org/wiki/Property:P236), the International Standard Ser  1Z =============`al Number.
 
 ### Class conciousness
-An item isn't always one thing. It can be a concept: a [Class of things](https://www.wikidata.org/wiki/User:TomT0m/Classification), which can be classified into a hierarchy: The item [`daily newspaper (Q1110794)`](https://www.wikidata.org/wiki/Q1110794) is a [`subclass of (P279)`](https://www.wikidata.org/wiki/Property:P279) the item [`newspaper (Q11032)`](https://www.wikidata.org/wiki/Q11032). That's a subclass of [`written news media (Q17172633)`](https://www.wikidata.org/wiki/Q17172633), which is a subclass of [`news media (Q1193236)`](https://www.wikidata.org/wiki/Q1193236) (a subclass of [`mass media (Q11033)`](https://www.wikidata.org/wiki/Q11033), a subclass of [`media (Q340169)`](https://www.wikidata.org/wiki/Q340169), etc.).
+An item isn't always one thing. It can be a concept: a [Class](https://www.wikidata.org/wiki/User:TomT0m/Classification) of things, with one item being a [`subclass of (P279)`](https://www.wikidata.org/wiki/Property:P279) of another, making a heirarchy. Each of these newsy items is a subclass of the one to its right:
+
+[`daily newspaper`](https://www.wikidata.org/wiki/Q1110794) :arrow_right: [`newspaper`](https://www.wikidata.org/wiki/Q11032) :arrow_right: [`written news media`](https://www.wikidata.org/wiki/Q17172633) :arrow_right: [`news media`](https://www.wikidata.org/wiki/Q1193236) :arrow_right: [`mass media`](https://www.wikidata.org/wiki/Q11033) :arrow_right: [`media`](https://www.wikidata.org/wiki/Q340169)…
 
 ## Coordinate categories
-The [Wikidata Query Service](https://query.wikidata.org/) searches Wikidata using the [SPARQL](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help) language. Queries must be effecient because its searches timesout in 60 seconds.
-
 For this project, it was convenient to have all news-media outlets in Wikidata be an instance of, or instance of a subclass of, [`news media`](https://www.wikidata.org/wiki/Q1193236). Most already were. But some news outlets weren't showing up because they were instances of classes that weren't in the `news media` heirarchy (e.g., [`investigative journalism (Q1127717)`](https://www.wikidata.org/wiki/Q1127717), [`news program`](https://www.wikidata.org/wiki/Q1358344), [`news magazine`](https://www.wikidata.org/wiki/Q1684600). I fixed those by added statement making them a `news media` subclass. (Check this network chart in [Wikidata Graph Builder](https://angryloki.github.io/wikidata-graph-builder/?item=Q1193236&property=P279&mode=reverse&sc_color=%231c5ec3c4&sc_width=5).
 ```mermaid
 mindmap
@@ -88,8 +88,7 @@ mindmap
 			newspaper 202>
 		id(women's press)
 ```
-<em style="font-size: 0.8rem;">Subclasses of `news media`, 2 levels down</em>
-
+*Subclasses of `news media`, 2 levels down*
 
 *[Briefly explain diff btwn instance and subclass]* A few news-outlets were instance of items that should new-media subclasses but weren't (e.g., [`news program`](https://www.wikidata.org/wiki/Q1358344) and  [`news magazine`](https://www.wikidata.org/wiki/Q1684600). I brought them into the fold (i.e., made them a `news media` subclass, or subclass of a `news media` subclass.)
 
@@ -107,10 +106,10 @@ The classification wrangling went something like this:
 ### Put publications in their place
 *[Briefly explain: The city was most often a `place of publication`, but sometimes was `headquarters location` (P159), `location` (P276), and/or `located in the administrative territorial entity` (P131). Done: Add `place of publication` to all news media. Todo: Add `street address` (P6375) (use format in prop's example: street, city, state, zip)]*
 
-### Prepare for the End Times
+### Preparing for the End Times
 *[Briefly explain: The date a publicaton ceased was 90% in dissolved, abolished or demolished (`P576`) statements, with the rest as end time (`P582`). Done: Copy all dates in `end time` into `dissolved…` (with precision: day, month, or year).]*
 
-### For members only
+### Members only
 *[Briefly explain: Membership in a press asscoiation was almost always `member of` ([P463](https://www.wikidata.org/wiki/Property:P463)) but a few times `affiliation` ([P1416](https://www.wikidata.org/wiki/Property:P1416)).]*
 
 
@@ -118,6 +117,8 @@ The classification wrangling went something like this:
 
 
 <!--
+The [Wikidata Query Service](https://query.wikidata.org/) searches Wikidata using the [SPARQL](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help) language. Queries must be effecient because its searches timesout in 60 seconds.
+
 LABEL ([`Q`]((https://www.wikidata.org/wiki/Q))
 *class* ([`Q`]((https://www.wikidata.org/wiki/Q))  
 *property* ([`P`](https://www.wikidata.org/wiki/Property:P))
