@@ -1,4 +1,11 @@
 # Wiki Media Cred
+[![Metaphactory dataviz of news-media subclasses in Wikidata](img/metaphactory-news-media.png)](https://wikidata.metaphacts.com/resource/wd:Q1193236)
+
+
+
+
+
+
 *[drafting…]*  
 Project Goal: Turn Wikimedia into a news-site credibility tool.
 
