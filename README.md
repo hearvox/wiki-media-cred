@@ -1,5 +1,5 @@
 # Wiki Media Cred
-[![Metaphactory dataviz of news-media subclasses in Wikidata](img/metaphactory-news-media.png)](https://wikidata.metaphacts.com/resource/wd:Q1193236)
+[![Metaphactory dataviz of news-media subclasses in Wikidata](img/metaphactory-news_media-trim.png)](https://wikidata.metaphacts.com/resource/wd:Q1193236)
 
 
 
