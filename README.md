@@ -9,7 +9,7 @@
 *[drafting…]*  
 Project Goal: Turn Wikimedia into a news-site credibility tool.
 
-These are resources and a data diary for the <a href="https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec">WikiCred/Iffy.news project</a>, adding news-site credibility indicators, found in external databases, into Wikidata/Wikipedia. The external data I has was mostly U.S. and English. Those with news-media data for other countries and languages may find this repo helpful.
+These are resources and a data diary for the <a href="https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec">WikiCred/Iffy.news project</a>, adding news-site credibility indicators, found in external databases, into Wikidata/Wikipedia. The external data I have was mostly U.S. and English. Those with news-media data for other countries and languages may find this repo helpful.
 
 The following workflow came from trial and many errors in my attempts to:
 * Find news-media items in Wikidata.
