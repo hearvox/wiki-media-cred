@@ -97,7 +97,7 @@ mindmap
 ```
 *Subclasses of `news media`, 2 levels down*
 
-*[Briefly explain diff btwn instance and subclass]* A few news-outlets were instance of items that should new-media subclasses but weren't (e.g., [`news program`](https://www.wikidata.org/wiki/Q1358344) and  [`news magazine`](https://www.wikidata.org/wiki/Q1684600). I brought them into the fold (i.e., made them a `news media` subclass, or subclass of a `news media` subclass.)
+*[@Todo: Briefly explain diff btwn instance and subclass]* A few news-outlets were instance of items that should new-media subclasses but weren't (e.g., [`news program`](https://www.wikidata.org/wiki/Q1358344) and  [`news magazine`](https://www.wikidata.org/wiki/Q1684600). I brought them into the fold (i.e., made them a `news media` subclass, or subclass of a `news media` subclass.)
 
 The classification wrangling went something like this:
 1. Get all news outlets under one general category: `news media`.
@@ -106,18 +106,19 @@ The classification wrangling went something like this:
 4. Label unlabled subclasses (one or two levels down), consulting the item's Wikipedia article or `official website` for the best name.
 
 ## Match domains
+*[@Todo: Describe ways to find, confirm website URL, and add both to new-media items.]*
 
 ## Crowd-wisdom classes
-*[Briefly explain: Find out which properties WD folk use most often for news-media items. Then go with the wiki-crowd wisdom in deciding which property/class to use.]*
+*[@Todo: Briefly explain: Find out which properties WD folk use most often for news-media items. Then go with the wiki-crowd wisdom in deciding which property/class to use.]*
 
 ### Put publications in their place
-*[Briefly explain: The city was most often a `place of publication`, but sometimes was `headquarters location` (P159), `location` (P276), and/or `located in the administrative territorial entity` (P131). Done: Add `place of publication` to all news media. Todo: Add `street address` (P6375) (use format in prop's example: street, city, state, zip)]*
+*[@Todo: Briefly explain: The city was most often a `place of publication`, but sometimes was `headquarters location` (P159), `location` (P276), and/or `located in the administrative territorial entity` (P131). Done: Add `place of publication` to all news media. Todo: Add `street address` (P6375) (use format in prop's example: street, city, state, zip)]*
 
 ### Preparing for the End Times
-*[Briefly explain: The date a publicaton ceased was 90% in dissolved, abolished or demolished (`P576`) statements, with the rest as end time (`P582`). Done: Copy all dates in `end time` into `dissolved…` (with precision: day, month, or year).]*
+*[@Todo: Briefly explain: The date a publicaton ceased was 90% in dissolved, abolished or demolished (`P576`) statements, with the rest as end time (`P582`). Done: Copy all dates in `end time` into `dissolved…` (with precision: day, month, or year).]*
 
 ### Members only
-*[Briefly explain: Membership in a press asscoiation was almost always `member of` ([P463](https://www.wikidata.org/wiki/Property:P463)) but a few times `affiliation` ([P1416](https://www.wikidata.org/wiki/Property:P1416)).]*
+*[@Todo: Briefly explain: Membership in a press asscoiation was almost always `member of` ([P463](https://www.wikidata.org/wiki/Property:P463)) but a few times `affiliation` ([P1416](https://www.wikidata.org/wiki/Property:P1416)).]*
 
 
 
