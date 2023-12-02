@@ -1,10 +1,11 @@
 # Wiki Media Cred: Issues
 See the WikiCred project: [Turning Wikimedia into a news-site credibility tool](https://misinfocon.com/turning-wikimedia-into-a-news-site-credibility-tool-422dbf28fdec).
 
-A list of :arrow_right:issues encountered while adding news-media credibility statements into Wikidata.
+A list of issues ( :arrow_right: ) encountered while adding news-media credibility statements into Wikidata.
 
 ## Domain name
-Tasks:
+The domain names of a news-outlets website is (usually) unique idnteifiresfirWikidata seems to have no property for adding the domain name for an item.
+
 1. Add domain name as an item's `alias`.
 1. Run script to get valid URL from the domain name, e.g., status code: `200`, with correct protocol (https?) and subdomain, if any (www?.
 1. Add URL of `official website` ([P856](https://www.wikidata.org/wiki/Property:P856)), with `preferred rank` ([Q71533031](https://www.wikidata.org/wiki/Q71533031)).
@@ -13,9 +14,16 @@ Tasks:
   inception (P571) https://www.wikidata.org/wiki/Property:P571
   start time (P580)
 
-:arrow_right: How do we add the domain name registration date? A credibility indicator.
+:arrow_right: How do we add the domain name registration date? A credibility indicator. Using either the `inception` (P571) or  https://www.wikidata.org/wiki/Property:P571 is correct for the domain name but not for the 
+  start time (P580)
+
+`official website` ([P856](https://www.wikidata.org/wiki/Property:P856))
 
 :arrow_right: Domain name is not a property, even though it is more specific and immutable than `official website`. While the domain name remains the same, URLs often change (e.g., http to https).
+
+reason for preferred rank (P7452)
+list of Wikidata reasons for preferred rank (Q76637123)
+currently valid value (Q71536244)
 
 ## QID matches
 Queries techniques for finding QIDs for entries in external databases. (With regex searches that: remove "The ", replace "-", add city and state, add "newspaper")
@@ -44,6 +52,11 @@ FIPS (55-3), GNIS.
 [news media and its subclasses](https://angryloki.github.io/wikidata-graph-builder/?item=Q1193236&property=P279&mode=reverse&sc_color=%231c5ec3c4&sc_width=5)
 `` ([](https://www.wikidata.org/wiki/Property:))
 
-https://github.com/scotch-io/All-Github-Emoji-Icons/tree/master
+https://github.com/ikatyang/emoji-cheat-sheet/tree/master
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
 
 :arrow_right: Clark Fork Valley Press	and Mineral Independent merger, [shares domain name](https://vp-mi.com/).
+
+
+
