@@ -6,30 +6,27 @@ A list of issues ( :arrow_right: ) encountered while adding news-media credibili
 
 
 ## Domain registration
+:arrow_right: How do we add domain-name registration date?
+
 The registration date of a news outlet's domain name can be a credibility indicator: most legit news sites registered their domain decades ago while most fake news sites are more recent: The average registration year for [U.S. daily newspapers](https://docs.google.com/spreadsheets/d/1WPU3ILa6YAFoKwryXQWudXv_MCzCaseBL-PrjlbfnFg/edit#gid=30371215)g) is 1998, for [fake-news sites](https://docs.google.com/spreadsheets/d/1ck1_FZC-97uDLIlvRJDTrGqBk0FuDe9yHkluROgpGS8/edit#gid=1144285784) it's 2014.
 
 But there's no domain-name property and qualifying `official website` ([P856](https://www.wikidata.org/wiki/Property:P856)) with `start time` is imprecise: https URLs often 'started' long after domain registration.
 
-:arrow_right: How do we add domain-registration date?
-
 ## Domain-name
+:arrow_right: Is there a way to state a news site's domain name (in addition to `alias`)?
+
 The domain name of a news outlet's website is (close to) a unique identifier. Adding the domain name as an item's 'alias' is helpful. But there seems to be no property for domain name, only for URLs, which are less specific and more mutable, e.g., http to https.
 
-:arrow_right: Is there a way, in addition to alias, to state a news site's domain name?
-
-
-
-
 ## QID matches
-Queries techniques for finding QIDs for entries in external databases. (With regex searches that: remove "The ", replace "-", add city and state, add "newspaper")
+:arrow_right: How do we avoid duplicates when adding new Wikidata items for entries not found?
 
-:arrow_right: How do we avoid duplicates when adding new Wikidata items for entries not found.
+Queries techniques for finding QIDs for entries in external databases. (With regex searches that: remove "The ", replace "-", add city and state, add "newspaper")
 
 ## Press association members
 Prop: `member of` ([P463](https://www.wikidata.org/wiki/Property:P463))
 
 ## Non-member databases
-:arrow_right: * How can I indicate inclusion in a database of legitimate news sources (if ‘member of’ isn’t accurate)? 
+:arrow_right: How can we indicate inclusion in a database of legitimate news sources (if ‘member of’ isn’t accurate)? 
 
 Researchers and media orgs have compiled several sizable, vetted databases of credible news sites, among them: UNS's [News Deserts](https://www.usnewsdeserts.com/) and [Project Oasis](https://www.projectnewsoasis.com/), JournalList's [trust.txt]{https://journallist.net/), and the [Alliance for Audited Media](https://auditedmedia.com/)
 
@@ -39,8 +36,7 @@ indexed in bibliographic database"
 * `part of` ([P361](https://www.wikidata.org/wiki/Property:P361))
 
 ## Place
-:arrow_right: * How do we add a news-outlet's geographical coverage (especially if different from ‘place of publication' and headquarters’)?
-
+:arrow_right: How do we add a news-outlet's geographical coverage (especially if different from ‘place of publication' and headquarters’)?
 
 FIPS (55-3), GNIS.
 
