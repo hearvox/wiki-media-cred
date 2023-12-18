@@ -13,14 +13,11 @@ The registration date of a news outlet's domain name can be a credibility indica
 But there's no domain-name property and qualifying `official website` ([P856](https://www.wikidata.org/wiki/Property:P856)) with `start time` is imprecise: https URLs often 'started' long after domain registration.
 
 ## Domain-name
-:arrow_right: Is there a way to state a news site's domain name (in addition to `alias`)?
+:arrow_right: How do we add domain name (in addition to `alias`)?
 
-The domain name of a news outlet's website is (close to) a unique identifier. Adding the domain name as an item's 'alias' is helpful. But there seems to be no property for domain name, only for URLs, which are less specific and more mutable, e.g., http to https.
+There seems to be no property for domain name, only for URLs, which are less specific and more mutable (e.g., http to https). The domain name of a news outlet's website is (close to) a unique identifier. Adding the domain name as an item's 'alias' is helpful but adding it as a claim would be better structured data.
 
-## QID matches
-:arrow_right: How do we avoid duplicates when adding new Wikidata items for entries not found?
 
-Queries techniques for finding QIDs for entries in external databases. (With regex searches that: remove "The ", replace "-", add city and state, add "newspaper")
 
 ## Press association members
 Prop: `member of` ([P463](https://www.wikidata.org/wiki/Property:P463))
@@ -42,18 +39,29 @@ FIPS (55-3), GNIS.
 
 :arrow_right: How do we indicate a newspaper's/news site's geographical coverage?
 
+## QID matches
+:arrow_right: How do we avoid duplicates when adding new Wikidata items for entries not found?
+
+Queries techniques for finding QIDs for entries in external databases. (With regex searches that: remove "The ", replace "-", add city and state, add "newspaper")
+
 ## Project tasks
-The project will add:
-1. Domain names
+The project is matching news outlets in Wikidata with those listed in media databases, adding new for outlets in the external lists but not in Wikidata, then importing the external data into Wikdata, including:
+1. Domain names (as `alias`)
 1. Domain registration dates
-1. Confirmed, valid URL
-1. Press association membership
-1. Inclusion in lists of legit new sources
+2. Consistant `description` wording (with city and state)
+1. Validated URL
+1. Press association membership(s)
+1. Inclusion in non-member lists of legit news sources
 1. Place of publication<sup>*</sup>
+1. Year founded<sup>*</sup> 
+1. Street address<sup>**</sup>
+1. Credibility ratings (Media Bias/Fack Check)
 
 
 <sup>*</sup> If missing.
 <sup>**</sup> Maybe.
+
+QIDs to domain names to specific news outlets, creating new itmes for news outlets not currenty in Wikidate. When down, I'll add Wikidata 
 
 Specific tasks:
 1. Making news-related classes a subclass of [(Q1193236)(https://www.wikidata.org/wiki/Q1193236)] (if not already).
