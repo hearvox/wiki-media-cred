@@ -49,8 +49,9 @@ The project is matching news outlets in Wikidata with those listed in media data
 1. Place of publication<sup>*</sup>
 1. Year founded<sup>*</sup> 
 1. Street address<sup>**</sup>
-<em<br>><sup>*</sup> If missing.
-<br><sup>**</sup> Maybe.</em>
+
+<br><em><sup>*</sup> If missing.</em>
+<br><em><sup>**</sup> Maybe.</em>
 
 
 Done:
