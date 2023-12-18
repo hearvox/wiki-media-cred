@@ -33,7 +33,8 @@ Is there be a property for a newspaper's geographical coverage area, especially 
 One newspaper may have different names in Wikidata and external databases (The Daily Times, Daily Time, The Daily-Times, The Washington Daily Times). I've tried multiple regex searches to find matches (remove "The ", replace "-", add names of city and state). This left about 5,000 U.S. newspapers which I can't find in Wikidata, so I'll be adding them as new items. Some, hopefully only a few, will inevitedbly be duplcates. But I'm out of query ideas to find those dupes.
 
 <hr>
-That's it for the question. Here's a little more on the project.
+That's it for the questions. Becasue I'll be editing tens fo thousands of Wikidata items, most tasks must be done programmatically, not manually. Here's a little more info…
+
 ## Tasks
 The project is matching news outlets in Wikidata with those listed in media databases, creating new items for outlets in the external lists but not in Wikidata, and then importing the external data into Wikdata, including:
 1. Domain names (as `alias`)
@@ -46,18 +47,15 @@ The project is matching news outlets in Wikidata with those listed in media data
 1. Place of publication (if missing)
 1. Year founded (if missing)
 1. Street address (maybe)
+1. Global site rank (maybe)
 
 Done:
 1. Making all news-related classes a subclass of `new media` ([Q1193236](https://www.wikidata.org/wiki/Q1193236)) (if not already).
 1. Making outlier U.S. news outlets an 'instance of' either 'news media' or one of its subclasses.
 1. Matching news-media QIDs with domain and news-outlet names in external databases.
 1. Adding any missing 'place of publication' to news media without one.
-
-Todo:
-1. Add domain name as an item's `alias`.
-1. Run script to get valid URL from the domain name, e.g., status code: `200`, with correct protocol (https?) and subdomain, if any (www?.
-1. Add URL of `official website` ([P856](https://www.wikidata.org/wiki/Property:P856)), with `preferred rank` ([Q71533031](https://www.wikidata.org/wiki/Q71533031)).
-1. (Maybe add 'reason for preferred rank' (P7452): 'currently valid value' (Q71536244), see `list of Wikidata reasons for preferred rank` ([Q76637123](https://www.wikidata.org/wiki/Q76637123)).
+1. Match Wikidata items (QIDs) with news-outlet entries in external databases (domain and newspaper names).
+1. Get data in external databases for Wikidata items, like domain name, press-association membership(s), and street address
 
 Resources created:
 * Wikipedia: [US newspapers](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikipedia-us-newspapers.tsv), auto-compiled ([code](https://github.com/hearvox/wiki-media-cred/blob/main/code/wikipedia-us-newspapers.php)) from [state listings](https://en.wikipedia.org/wiki/Category:Lists_of_newspapers_published_in_the_United_States_by_state), with WD QID and WP path and page ID.
@@ -65,6 +63,13 @@ Resources created:
 * Wikidata: [US cities and towns](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikidata-us-cities.tsv), with QIDs (also in [csv](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikidata-us-cities.csv)).
 * Wikidata: [US states](https://github.com/hearvox/wiki-media-cred/blob/main/data/wikidata-us-states.tsv), with QID, lat/lon, FIPS and abbreviations (two-letter and AP).
 * Wikidata: [Identfiers](/Topics/Identifers.md), news-outlet references at external sites.
+
+Todo:
+1. Run script to get valid URL from the domain name, e.g., status code: `200`, with correct protocol (https?) and subdomain, if any (www?.
+1. Add URL of `official website` ([P856](https://www.wikidata.org/wiki/Property:P856)), with `preferred rank` ([Q71533031](https://www.wikidata.org/wiki/Q71533031)).
+1. (Maybe add 'reason for preferred rank' (P7452): 'currently valid value' (Q71536244), see `list of Wikidata reasons for preferred rank` ([Q76637123](https://www.wikidata.org/wiki/Q76637123)).
+1. Create new items for news outlets not found in Wikidata.
+1. Add extenal-db data into Wikidat.
 
 
 
