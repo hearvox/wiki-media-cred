@@ -11,7 +11,7 @@ The registration date of a news outlet's domain name can be a credibility indica
 But there's no domain-name property and qualifying the `official website` ([P856](https://www.wikidata.org/wiki/Property:P856)) with `start time` is imprecise: the https in an URLs often 'started' long after domain registration.
 
 ## Domain-name
-:arrow_right: How do we add domain name asa a statment (i.e., in addition to `alias`)?
+:arrow_right: How do we add domain name as a statement (i.e., in addition to `alias`)?
 
 There's no property for domain name, only for URLs, which are less specific and more mutable (e.g., http to https). The domain name of a news outlet's website is (close to) a unique identifier. Adding the domain name as an item's 'alias' is helpful but adding it as a statement would be better structured data.
 
@@ -30,10 +30,10 @@ Is there be a property for a newspaper's geographical coverage area, especially 
 ## QID matches
 :arrow_right: How do we avoid duplicates when adding new Wikidata items for news-outlet items?
 
-One newspaper may have different names in Wikidata and external databases (The Daily Times, Daily Time, The Daily-Times, The Washington Daily Times). I've tried multiple regex searches to find matches (remove "The ", replace "-", add names of city and state). This left about 5,000 U.S. newspapers which I can't find in Wikidata, so I'll be adding them as new items. Some, hopefully only a few, will inevitedbly be duplcates. But I'm out of query ideas to find those dupes.
+One newspaper may have different names in Wikidata and external databases (The Daily Times, Daily Times, The Daily-Times, The Washington Daily Times). I've tried multiple regex searches to find matches (remove "The ", replace "-", add names of city and state). This left about 5,000 U.S. newspapers which I can't find in Wikidata, for which I'll create new items. Some will inevitably be duplicates, hopefully only a few. But I'm out of query ideas to find those dupes.
 
 <hr>
-That's it for the questions. Becasue I'll be editing tens fo thousands of Wikidata items, most tasks must be done programmatically, not manually. Here's a little more info…
+That's it for the questions. Because I'll be editing tens of thousands of Wikidata items, most tasks must be done programmatically, not manually. Here's a little more info…
 
 ## Tasks
 The project is matching news outlets in Wikidata with those listed in media databases, creating new items for outlets in the external lists but not in Wikidata, and then importing the external data into Wikdata, including:
