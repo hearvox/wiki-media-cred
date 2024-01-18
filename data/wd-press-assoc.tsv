@@ -1,34 +1,46 @@
-state	press-assoc	qid	domain
-AL	Alabama Press Association	Q117804046	alabamapress.org
-AR	Arkansas Press Association	Q117804346	ananews.com
-AZ	Arizona Newspaper Association	Q117804231	arkansaspress.org
-CA	California News Publishers Association	Q16972121	cnpa.com
-CO	Colorado Press Association	Q5148862	coloradopressassociation.com
-FL	Florida Press Association	Q117804347	flpress.com
-GA	Georgia Press Association	Q117804348	gapress.org
-ID	Newspaper Association of Idaho	Q117804349	newspaperassociationofidaho.com
-IN	Hoosier State Press Association	Q117804350	hspa.com
-KA	Kansas Press Association	Q117804414	kspress.com
-KY	Kentucky Press Association	Q117804415	kypress.com
-LA	Louisiana Press Association	Q117804416	lapress.com
-MD	MDDC Press Association	Q117804418	mddcpress.com
-ME	Maine Press Association	Q117804417	mainepressassociation.org
-MS	Mississippi Press Association	Q6879247	mspress.org
-MT	Montana Newspaper Association	Q117804419	mtnewspapers.com
-NC	North Carolina Press Association	Q85789527	ncpress.com
-ND	North Dakota Newspaper Association	Q117804425	ndna.com
-NE	Nebraska Press Association	Q117804420	nebpress.com
-NJ	New Jersey Press Association	Q117804483	njpa.org
-NM	New Mexico Press Association	Q117804484	nmpress.org
-NV	Nevada Press Association	Q7003473	nevadapress.com
-OH	Ohio News Media Association	Q117804426	ohionews.org
-OK	Oklahoma Press Association	Q117804427	okpress.com
-OR	Oregon Newspaper Publishers Association	Q19599505	orenews.com
-PA	Pennsylvania NewsMedia Association	Q7164018	panewsmedia.org
-SC	South Carolina Press Association	Q117804428	scpress.org
-TX	Texas Press Association	Q117804429	texaspress.com
-UT	Utah Press Association	Q117804430	utahpress.com
-VI	Virginia Press Association	Q117804432	vpa.net
-VT	Vermont Press Association	Q117804485	vtpress.org
-WI	Wisconsin Newspaper Association	Q117804487	wnanews.com
-WV	West Virginia Press Association	Q117804486	wvpress.org
+list	press-assoc	qid	domain	member-directory
+AL	Alabama Press Association	Q117804046	alabamapress.org	https://www.alabamapress.org/active-papers/
+AR	Arkansas Press Association	Q117804346	arkansaspress.org	https://arkansaspress.org/apa-newspaper-members/
+AZ	Arizona Media Association	Q117804231	azmedia.org	https://azmedia.org/directory/
+CA	California News Publishers Association	Q16972121	cnpa.com	https://cnpa.com/directories/cnpa-member-directories
+CO	Colorado Press Association	Q5148862	coloradopressassociation.com	https://coloradopressassociation.com/find-a-member/
+FL	Florida Press Association	Q117804347	flpress.com	https://flpress.com/members/member-directory/
+GA	Georgia Press Association	Q117804348	gapress.org	https://gapress.org/newspaper-directory/
+IA	Iowa Newspaper Association	Q123210383	inanews.com	https://inanews.com/find-iowa-newspaper/
+ID	Newspaper Association of Idaho	Q117804349	newspaperassociationofidaho.com	http://www.newspaperassociationofidaho.com/members/
+IL	Illinois Press Association	Q123211599	illinoispress.org	
+IN	Hoosier State Press Association	Q99306326	hspa.com	https://www.hspa.com/news-directory/
+KA	Kansas Press Association	Q117804414	kspress.com	https://kspress.com/directory/browse-full-member-database
+KY	Kentucky Press Association	Q117804415	kypress.com	https://www.kypress.com/membership/directory/
+LA	Louisiana Press Association	Q117804416	lapress.com	https://www.lapress.com/resources/media_directory/
+MA	Massachusetts Newspapers Publishers Association	Q123211668	masspublishers.org	
+MDDC	MDDC Press Association	Q117804418	mddcpress.com	https://mddcpress.com/wp-content/uploads/2021/11/MDDC-Member-List-2021.pdf
+ME	Maine Press Association	Q117804417	mainepressassociation.org	https://mainepressassociation.org/about/members-3/
+MI	Michigan Press Association	Q123211701	michiganpress.org	
+MN	Minnesota Newspaper Association	Q123211728	mna.org	https://mna.org/newspaper-directory/
+MO	Missouri Press Association	Q100181432	mopress.com	https://mopress.com/newspaper-directory/?wpbdp_view=all_listings
+MS	Mississippi Press Association	Q6879247	mspress.org	https://www.mspress.org/page/newspapers
+MT	Montana Newspaper Association	Q117804419	mtnewspapers.com	https://www.mtnewspapers.com/member-directory/
+NC	North Carolina Press Association	Q85789527	ncpress.com	https://www.ncpress.com/directory/
+ND	North Dakota Newspaper Association	Q117804425	ndna.com	https://www.ndna.com/newspapers/
+NE	Nebraska Press Association	Q117804420	nebpress.com	https://nebpress.com/geographical-listings/
+NH	New Hampshire Press Association	Q124306672	pressnh.org	https://pressnh.org/
+NJ	New Jersey Press Association	Q106339935	njpa.org	http://www.njpa.org/njpa/members.html
+NM	New Mexico Press Association	Q117804484	nmpress.org	https://www.nmpress.org/membership/member_newspapers/nmpa-member-newspapers/article_d9cb45a6-38f1-11e8-acf7-ab3e2c26b2f6.html
+NV	Nevada Press Association	Q7003473	nevadapress.com	https://nevadapress.com/category/about-us/directory/
+NY	New York News Publishers Association	Q123213584	nynpa.com	https://nynpa.com/members.html
+OH	Ohio News Media Association	Q117804426	ohionews.org	https://www.ohionews.org/aws/ONA/pt/sp/member_directory
+OK	Oklahoma Press Association	Q117804427	okpress.com	https://okpress.com/page/memberships
+OR	Oregon Newspaper Publishers Association	Q19599505	orenews.com	http://www.orenews.com/member-directory
+PA	Pennsylvania NewsMedia Association	Q7164018	panewsmedia.org	https://panewsmedia.org/trust.txt
+SC	South Carolina Press Association	Q117804428	scpress.org	https://scpress.org/newspapers/
+SD	South Dakota Newspaper Association	Q123213918	sdna.com	https://www.sdna.com/directory
+TN	Tennessee Press Association	Q123213981	tnpress.com	https://tnpress.com/newspapers-online/
+TX	Texas Press Association	Q117804429	texaspress.com	https://www.texaspress.com/newspapers
+UT	Utah Press Association	Q117804430	utahpress.com	https://web.archive.org/web/20190201181016/https://utahpress.com/member-newspapers/
+VA	Virginia Press Association	Q117804432	vpa.net	https://www.vpa.net/places/category/newspapers/
+VT	Vermont Press Association	Q117804485	vtpress.org	https://www.vtpress.org/vpa/about-our-newspapers/
+WA	Washington Newspaper Publishers Association	Q123214059	wnpa.com	https://wnpa2.clubexpress.com/content.aspx?page_id=78&club_id=220213
+WI	Wisconsin Newspaper Association	Q117804487	wnanews.com	https://wnanews.com/membership/meet-our-members/
+WV	West Virginia Press Association	Q117804486	wvpress.org	https://wvpress.org/wvnewspapers/
+WY	Wyoming Press Association	Q123214106	wyopress.org	https://www.wyopress.org/members/wpa_member_directory.html
