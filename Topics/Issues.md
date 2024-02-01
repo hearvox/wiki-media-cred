@@ -6,7 +6,7 @@ A list of issues ( :arrow_right: ) encountered while adding (U.S.) news-media cr
 ## Domain registration
 :arrow_right: How do we add domain-name registration date?
 
-The registration date of a news outlet's domain name can be a credibility indicator: most legit news sites registered their domain decades ago while most fake news sites are more recent: The average registration year for [U.S. daily newspapers](https://docs.google.com/spreadsheets/d/1WPU3ILa6YAFoKwryXQWudXv_MCzCaseBL-PrjlbfnFg/edit#gid=30371215)g) is 1998, for [fake-news sites](https://docs.google.com/spreadsheets/d/1ck1_FZC-97uDLIlvRJDTrGqBk0FuDe9yHkluROgpGS8/edit#gid=1144285784) it's 2014.
+The registration date of a news outlet's domain name can be a credibility indicator: most legit news sites registered their domain decades ago while most fake news sites are more recent: The average registration year for [U.S. daily newspapers](https://docs.google.com/spreadsheets/d/1WPU3ILa6YAFoKwryXQWudXv_MCzCaseBL-PrjlbfnFg/edit#gid=30371215) is 1998, for [fake-news sites](https://docs.google.com/spreadsheets/d/1ck1_FZC-97uDLIlvRJDTrGqBk0FuDe9yHkluROgpGS8/edit#gid=1144285784) it's 2014.
 
 But there's no domain-name property and qualifying the `official website` ([P856](https://www.wikidata.org/wiki/Property:P856)) with `start time` is imprecise: the https in an URLs often 'started' long after domain registration.
 
